@@ -51,6 +51,22 @@
   
 
   
+      ,"page3": {
+          "title": "First Markdown Post",
+          "content": "Markdown is a type of language that similar to html, in the aspect that they both are markup languages . print(&quot;You can also use python&quot;) . this | is a | ordered list | Big heading . Sorta big heading . Small heading .",
+          "url": "https://kushsirohi123.github.io/kushsirohirepo/_pages/postfile%20(3).html",
+          "relUrl": "/_pages/postfile%20(3).html",
+          "date": ""
+      }
+      
+  
+
+  
+  
+
+  
+
+  
   
 
   
@@ -59,18 +75,13 @@
   
 
   
-
-  
   
 
   
   
 
   
-  
-
-  
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://kushsirohi123.github.io/kushsirohirepo/robots.txt",
