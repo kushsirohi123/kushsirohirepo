@@ -2,21 +2,21 @@
   
     
         "post0": {
-            "title": "First Markdown Post",
-            "content": "Markdown is a type of language that similar to html, in the aspect that they both are markup languages . print(&quot;You can also use python&quot;) . this | is a | ordered list | Big heading . Sorta big heading . Small heading .",
-            "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/08/21/markdownpost-(1).html",
-            "relUrl": "/markdown/2022/08/21/markdownpost-(1).html",
-            "date": " • Aug 21, 2022"
+            "title": "First Jupyter Notebook",
+            "content": "print(&quot;hello world&quot;) . hello world .",
+            "url": "https://kushsirohi123.github.io/kushsirohirepo/jupyter/2022/08/23/_08_21_1st_Notebook.html",
+            "relUrl": "/jupyter/2022/08/23/_08_21_1st_Notebook.html",
+            "date": " • Aug 23, 2022"
         }
         
     
   
     
         ,"post1": {
-            "title": "First Jupyter Notebook",
-            "content": "print(&quot;hello world&quot;) . hello world .",
-            "url": "https://kushsirohi123.github.io/kushsirohirepo/jupyter/2022/08/21/_08_21_1st_Notebook.html",
-            "relUrl": "/jupyter/2022/08/21/_08_21_1st_Notebook.html",
+            "title": "First Markdown Post",
+            "content": "Markdown is a type of language that similar to html, in the aspect that they both are markup languages . print(&quot;You can also use python&quot;) . this | is a | ordered list | Big heading . Sorta big heading . Small heading .",
+            "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/08/21/markdownpost-(1).html",
+            "relUrl": "/markdown/2022/08/21/markdownpost-(1).html",
             "date": " • Aug 21, 2022"
         }
         
