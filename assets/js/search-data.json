@@ -4,9 +4,9 @@
         "post0": {
             "title": "First Jupyter Notebook",
             "content": "print(&quot;hello world&quot;) . hello world .",
-            "url": "https://kushsirohi123.github.io/kushsirohirepo/jupyter/2022/08/23/_08_21_1st_Notebook.html",
-            "relUrl": "/jupyter/2022/08/23/_08_21_1st_Notebook.html",
-            "date": " • Aug 23, 2022"
+            "url": "https://kushsirohi123.github.io/kushsirohirepo/jupyter/2022/08/24/_08_21_1st_Notebook.html",
+            "relUrl": "/jupyter/2022/08/24/_08_21_1st_Notebook.html",
+            "date": " • Aug 24, 2022"
         }
         
     
@@ -47,9 +47,20 @@
 
   
   
+      ,"page0": {
+          "title": "MY APCSP notes",
+          "content": "APCSP NOTES .",
+          "url": "https://kushsirohi123.github.io/kushsirohirepo/_pages/2022-08-21-_pages_notes.html",
+          "relUrl": "/_pages/2022-08-21-_pages_notes.html",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page1": {
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "I am a 14 year old sophmore attending del norte high school. I was born in India, and moved to the US when I was 8. Ive been coding for a couple months prior to this class, and im excited to learn new aspects about programming. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://kushsirohi123.github.io/kushsirohirepo/about/",
@@ -81,7 +92,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://kushsirohi123.github.io/kushsirohirepo/robots.txt",
