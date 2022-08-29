@@ -2,7 +2,7 @@
 toc: markdown                                                               
 layout: post
 description: Math
-categories: [MATHEMATICS]
+categories: [SCHOOL]
 title: MATH NOTES 
 ---
 >   
