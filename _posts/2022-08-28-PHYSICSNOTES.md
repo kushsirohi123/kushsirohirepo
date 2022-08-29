@@ -6,7 +6,7 @@ categories: [SCHOOL]
 title: PHYSICS NOTES  
 ---
 >   
-##Velocity lab
+ Velocity lab
 Purpose:  
 - To understand the difference between displacement and position. 
 - To calculate an average velocity. 
