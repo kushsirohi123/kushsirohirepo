@@ -6,12 +6,12 @@ categories: [MATHEMATICS]
 title: MATH NOTES 
 ---
 >   
-INTEGRATED 3A: CHAPTER 1 CONCEPTS 
-    : Domain and Range
-    : Quadratics 
-    : Solve equations
-    : evaluating expressions
-    : Integrated 2 book review 
+##INTEGRATED 3A: CHAPTER 1 CONCEPTS 
+    - Domain and Range
+    - Quadratics 
+    - Solve equations
+    - evaluating expressions
+    - Integrated 2 breif review 
 
 
 >
