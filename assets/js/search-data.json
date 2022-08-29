@@ -124,9 +124,20 @@
 
   
   
+      ,"page0": {
+          "title": "APCSP vocab",
+          "content": "md - markdown . .ipynb - jupyter extention . HTML - Hyper Text Markup Language . if statement - conditional statement that decided wether something runs. Very versatile . Def- makes a function, which is essentially resuable code .",
+          "url": "https://kushsirohi123.github.io/kushsirohirepo/_pages/2022-08-28-APCSPvocab.html",
+          "relUrl": "/_pages/2022-08-28-APCSPvocab.html",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page1": {
+
+  
+      ,"page2": {
           "title": "About Me",
           "content": "I am a 14 year old sophmore attending del norte high school. I was born in India, and moved to the US when I was 8. Ive been coding for a couple months prior to this class, and im excited to learn new aspects about programming. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://kushsirohi123.github.io/kushsirohirepo/about/",
@@ -158,7 +169,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://kushsirohi123.github.io/kushsirohirepo/robots.txt",
