@@ -31,5 +31,5 @@ Based on the data you collected, how long would it take the fast car to get to a
 Using the relationships between change in position and the change in time, predict how long it would take the fast car to travel 45 m.  What would be the change in the position of the slow car after 50 s?
 What would be the average speed of the slow car if it traveled from the zero to the five meter mark (use the time from your data table)?  Average velocity?
 What would be the average speed of the slow car if it traveled from the zero to the five meter mark and back to the zero mark (double the time)?  Average velocity?
-
+![]({{ site.baseurl }}/images/Physicslab.jpg)
 >
