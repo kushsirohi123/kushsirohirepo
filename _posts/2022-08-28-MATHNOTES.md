@@ -1,7 +1,7 @@
 ---
 toc: markdown                                                               
 layout: post
-description: Math
+description: This is a compilation of my math homeworks/quizzes
 categories: [MATHEMATICS]
 title: MATH NOTES 
 ---
