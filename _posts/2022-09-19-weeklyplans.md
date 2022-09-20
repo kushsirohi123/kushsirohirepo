@@ -1,3 +1,14 @@
+
+---
+toc: markdown                                                               
+layout: post
+description: This is a collection of my weekly progress  
+categories: [school]
+title: docker  
+---
+>   
+
+
 # week 0
 - created a fastpages
 - posted a jupyter file
@@ -16,3 +27,7 @@
 # week 4
 - Created a fastpages local server and a flask server for our group project
 - created a video detailing it 
+
+
+>
+
