@@ -1,3 +1,14 @@
+
+---
+toc: markdown                                                               
+layout: post
+description: This is a collection of my weekly progress  
+categories: [school]
+title: Weekly Progress  
+---
+>   
+
+
 # week 0
 - created a fastpages
 - posted a jupyter file
@@ -13,6 +24,7 @@
 - lists, dictionaries, loops
 # week 3
 - Created a quiz app within app lab
-# week 4
-- Created a fastpages local server and a flask server for our group project
-- created a video detailing it 
+
+
+
+>
