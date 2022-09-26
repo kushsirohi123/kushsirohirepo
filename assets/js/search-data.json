@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Title",
-            "content": "",
+            "content": ". toc: markdown layout: post description: javascript categories: [SCHOOL] . title: javascript NOTES . console.log(&quot;helloworld&quot;) . helloworld . var msg = &quot;Hello, World!&quot;; console.log(msg); . Hello, World! . function logItType(output) { console.log(typeof output, &quot;;&quot;, output); } console.log(&quot;KUSH SIROHI&quot;) logItType(&quot;hello&quot;); logItType(2022); logItType([2, 4, 8]); . KUSH SIROHI string ; hello number ; 2022 object ; [ 2, 4, 8 ] . . [Function] .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/2022/09/26/javascript.html",
             "relUrl": "/2022/09/26/javascript.html",
             "date": " • Sep 26, 2022"
