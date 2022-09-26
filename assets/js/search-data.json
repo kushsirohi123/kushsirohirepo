@@ -179,9 +179,20 @@
   
 
   
+      ,"page1": {
+          "title": "Submenu",
+          "content": "| JavaScript | Table | .",
+          "url": "https://kushsirohi123.github.io/kushsirohirepo/_pages/2022-09-25-submenu.html",
+          "relUrl": "/_pages/2022-09-25-submenu.html",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page2": {
+
+  
+      ,"page3": {
           "title": "About Me",
           "content": "I am a 14 year old sophmore attending del norte high school. I was born in India, and moved to the US when I was 8. Ive been coding for a couple months prior to this class, and im excited to learn new aspects about programming. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
           "url": "https://kushsirohi123.github.io/kushsirohirepo/about/",
@@ -213,7 +224,7 @@
   
 
   
-      ,"page11": {
+      ,"page12": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://kushsirohi123.github.io/kushsirohirepo/robots.txt",
