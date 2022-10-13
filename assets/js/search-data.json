@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "This works by having an input, and if that input is equal to one of the parameters in menu, then it deisplays the price.",
+            "title": "This works by having an input, and if that input is equal to one of the parameters in menu, then it displays the price.",
             "content": "menu = {&quot;burger&quot;: 3.99, &quot;fries&quot;: 1.99, &quot;drink&quot;: 0.99} total = 0 #shows the user the menu and prompts them to select an item print(&quot;Menu&quot;) for k,v in menu.items(): print(k + &quot; $&quot; + str(v)) #why does v have &quot;str&quot; in front of it? #ideally the code should prompt the user multiple times item = input(&quot;Please select an item from the menu&quot;) while total == 0: # item 1: meal (item) item = input(&quot;What would you like to order?&quot;) print(&quot;Meal:&quot;, item.lower()) for k,v in menu.items(): if item.lower() == k: print(&quot;Price: $&quot;, menu[item.lower()]) total = 1 . Menu burger $3.99 fries $1.99 drink $0.99 Meal: fries Price: $ 1.99 .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/2022/10/12/_10_22_fixingerrors.html",
             "relUrl": "/2022/10/12/_10_22_fixingerrors.html",
