@@ -11,6 +11,7 @@ title: APCSP vocab
 ### HTML - Hyper Text Markup Language
 ### if statement - conditional statement that decided wether something runs. Very versatile 
 ### Def- makes a function, which is essentially resuable code 
+### API - application programming interface, it is a way for the computer for communicate with each other 
 
 
 >
