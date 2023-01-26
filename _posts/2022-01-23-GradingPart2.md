@@ -2,7 +2,7 @@
 | Category  | My score | College board | Commentary |
 | ------------ | ------------- | ------------- | ------------- | 
 | Program Purpose and Function| 1  | 0 | The student shows that he has a clear understanding of the program function and purpose and does show the program function. 
-| Data Abstraction|1   | 0 |The program shows  that the sudent has a an understanding of data abstraction and  it to improve the program's functionality.
+| Data Abstraction|1   | 0 |The program shows  that the student has a an understanding of data abstraction and  it to improve the program's functionality.
  |
 | Managing Complexity| 1 | 0 | The program shows a good understanding of managing complexity. When it comes to implementing the complexity, the student does that well 
  |
