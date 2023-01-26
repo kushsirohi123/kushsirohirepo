@@ -1,4 +1,14 @@
-Student 1 Reflection 
+
+---
+toc: true                                                               
+layout: post
+description: This is a collection of my docker server  
+categories: [markdown]
+title: Docker server
+---
+>   
+
+# Student 1 Reflection 
 
 | Category  | Student 1 | Student 2 | College board | Student grade | Commentary |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -9,7 +19,7 @@ Student 1 Reflection
 |  Algorithm Implementation  |  All of the program code is there, sequencing, selection, iteration, and is explained in detailed steps how the algorithm works.   |    All of the program code is there, sequencing, selection, iteration, and is explained in detailed steps how the algorithm works |  1/1|  1/1  |  Content Cell  |
 |  Testing| All conditions were tested, and the result was outputted correctly based on the conditions given |All conditions were tested, and the result was outputted correctly based on the conditions given|  |  1/1  |  1/1  |  Content Cell  |  Content Cell  |
 
-Student 1 reflection:
+# Student 1 reflection:
     - The program served its main served its main purpose, which was giving information of a triangle based on the input. 
     - They lost points on the first critera from collegeboard because even though they showed the input and output, they did not specify the program purpose, instead they described the code/function itself 
     - They lost points on the create preformance task because they did not include an accurate explanition of how the program could be written differently without lists, and how lists are beneficial to the program
@@ -17,3 +27,6 @@ Student 1 reflection:
 Student 2
 - The student earned points on all of the criteria. The program's main purpose is to serve as entertainment for the user, and the program allows the user to place and remove tiles on a grid, which are progressed programatticly by the rules of Game of life, quoting collegeboard. 
 -  
+
+>
+

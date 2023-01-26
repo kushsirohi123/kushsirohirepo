@@ -1,3 +1,14 @@
+
+
+---
+toc: true                                                               
+layout: post
+description: This is a collection of my docker server  
+categories: [markdown]
+title: Docker server
+---
+>   
+
 # Student 1 
 | Category  | My score | College board | Commentary |
 | ------------ | ------------- | ------------- | ------------- | 
@@ -49,3 +60,5 @@
 | Procedural Abstraction	  | 1 | 0 |  The program shows a base understanding of procedural abstraction and implements it to improve the program's functionality.
  |
 | Algorithm Implementation	  | 0 | 0 | There is not much algorithm implementation, I just see code | 1| 1| the student clearly demonstrates the program and its code|
+
+>
