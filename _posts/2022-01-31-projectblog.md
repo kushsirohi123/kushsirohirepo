@@ -1,9 +1,9 @@
 ---
 toc: markdown                                                               
 layout: post
-description: This is a my 5.1 5.2 collegeboard blog
+description: This is a my project blog
 categories: [SCHOOL]
-title: 5.1 5.2 blog NOTES  
+title: Project Blog
 ---
 >  
 # Future Feature: Learning Feature  
