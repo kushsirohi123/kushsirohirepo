@@ -9,11 +9,11 @@ title: Project Blog
 # Future Feature: Learning Module  
 ## Program purpose and function
 
-###  The purpose of the learning feature will make it so when users press a help button, they can get a guide to the different buttons on the site, and if you hover over a button, it gives you a short descruptoon. 
+###  The purpose of the learning feature will make a module where users can learn about day trading, and in the end they could take a quiz that would 
 
 ## Data Abstraction
 
-###  I would use lists, classes, dictionaries to hold the data values such as the suggestions, and when I need to, I would index those values to show. 
+###  I would use lists, classes, dictionaries to hold the value for the quiz 
 
 ## Procedural Abstraction
 
