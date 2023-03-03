@@ -6,15 +6,15 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Kush's Blog 
-description: A mini guide to the glorius life of Kush Sirohi
+title: fastpages Project
+description: The first project.
 github_username: kushsirohi123
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "kushsirohirepo"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
-url: "https://kushsirohi123.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://kushsirohirepo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 ###########################################################
 #########  Special Instructions for baseurl ###############
@@ -39,16 +39,7 @@ baseurl: "/kushsirohirepo" # the subpath of your site, e.g. "/blog".
 # Github and twitter are optional:
 minima:
   skin: dark
-  #  social_links:
-  #    twitter: NighthawkCoding
-  #    github: nighthawkcoders
-  #   youtube_channel: UClIKOsDS5dsfzFA3zveDT3Q
   social_links:
-    - { platform: github, user_url: "https://github.com/nighthawkcoders"}
-    - { platform: twitter, user_url: "https://twitter.com/NighthawkCoding"}
-    - { platform: youtube, user_url: "https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q"}
-
-
 
 # Set this to true to get LaTeX math equation support
 use_math: 
@@ -57,7 +48,7 @@ use_math:
 show_description: true
 
 # Set this to true to display image previews on home page, if they exist
-show_image: false
+show_image: true
 
 # Set this to true to turn on annotations with hypothes.is (https://web.hypothes.is/)
 annotations: false
@@ -78,7 +69,7 @@ include:
   - _pages
 
 # This specifies what badges are turned on by default for notebook posts.
-default_badges:
+base_badges:
   github: true
   binder: true
   colab: true
@@ -90,7 +81,7 @@ html_escape:
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true
-theme: minima 
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
@@ -109,7 +100,7 @@ plugins:
 paginate: 15
 paginate_path: /page:num/
 
-remote_theme:  jekyll/minima
+remote_theme: jekyll/minima
 
 titles_from_headings:
   enabled:     true

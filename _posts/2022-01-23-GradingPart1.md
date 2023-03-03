@@ -1,9 +1,8 @@
 ---
-toc: true                                                               
-layout: post
-description: This is my collegeboard grading  
-categories: [markdown]
-title: GradingPart1
+title: CPT blog
+layout: base
+description: The concept behind making a graphing application using JavaScript canvas.
+tags: [javascript, canvas]
 ---
 >   
 
