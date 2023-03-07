@@ -1,61 +1,76 @@
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Lists, Dictionaries, Loops | fastpages Project</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Lists, Dictionaries, Loops" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The first project." />
+<meta property="og:description" content="The first project." />
+<link rel="canonical" href="https://kushsirohi123.github.io/kushsirohirepo/jupyter/week2/2022/09/20/pythonlists&dictionaries.html" />
+<meta property="og:url" content="https://kushsirohi123.github.io/kushsirohirepo/jupyter/week2/2022/09/20/pythonlists&dictionaries.html" />
+<meta property="og:site_name" content="fastpages Project" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-20T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Lists, Dictionaries, Loops" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-20T00:00:00-05:00","datePublished":"2022-09-20T00:00:00-05:00","description":"The first project.","headline":"Lists, Dictionaries, Loops","mainEntityOfPage":{"@type":"WebPage","@id":"https://kushsirohi123.github.io/kushsirohirepo/jupyter/week2/2022/09/20/pythonlists&dictionaries.html"},"url":"https://kushsirohi123.github.io/kushsirohirepo/jupyter/week2/2022/09/20/pythonlists&dictionaries.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/kushsirohirepo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kushsirohi123.github.io/kushsirohirepo/feed.xml" title="fastpages Project" /><link rel="shortcut icon" type="image/x-icon" href="/kushsirohirepo/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Lists, Dictionaries, Loops</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-20T00:00:00-05:00" itemprop="datePublished">
-        Sep 20, 2022
-      </time>
-       • <span class="read-time" title="Estimated read time">
-    
-    
-      1 min read
-    
-</span></p>
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
 
-    
-      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
-      
-        <a class="category-tags-link" href="/kushsirohirepo/categories/#jupyter">jupyter</a>
-        &nbsp;
-      
-        <a class="category-tags-link" href="/kushsirohirepo/categories/#week2">week2</a>
-        
-      
-      </p>
-    
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
 
-    
-      
-        <div class="pb-5 d-flex flex-justify-center">
-          <div class="px-2">
+  <div class="wrapper"><a class="site-title" rel="author" href="/kushsirohirepo/">fastpages Project</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
 
-    <a href="https://github.com/kushsirohi123/kushsirohirepo/tree/master/_notebooks/09-05-2022-pythonlists&dictionaries.ipynb" role="button" target="_blank">
-<img class="notebook-badge-image" src="/kushsirohirepo/assets/badges/github.svg" alt="View On GitHub">
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/kushsirohi123/kushsirohirepo/master?filepath=_notebooks%2F09-05-2022-pythonlists%26dictionaries.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/kushsirohirepo/assets/badges/binder.svg" alt="Open In Binder"/>
-    </a>
-</div>
-
-          <div class="px-2">
-    <a href="https://colab.research.google.com/github/kushsirohi123/kushsirohirepo/blob/master/_notebooks/09-05-2022-pythonlists&dictionaries.ipynb" target="_blank">
-        <img class="notebook-badge-image" src="/kushsirohirepo/assets/badges/colab.svg" alt="Open In Colab"/>
-    </a>
-</div>
-          <div class="px-2">
-  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fkushsirohi123%2Fkushsirohirepo%2Fblob%2Fmaster%2F_notebooks%2F09-05-2022-pythonlists%26dictionaries.ipynb" target="_blank">
-      <img class="notebook-badge-image" src="/kushsirohirepo/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
-  </a>
-</div>
-
-        </div>
-      </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    <ul id="toc" class="section-nav">
-</ul><!--
+        <div class="trigger"><a class="page-link" href="/kushsirohirepo/_pages/2022-08-28-APCSPvocab.html">APCSP vocab</a><a class="page-link" href="/kushsirohirepo/_pages/2022-09-25-submenu.html">Submenu</a><a class="page-link" href="/kushsirohirepo/about/">About Me</a><a class="page-link" href="/kushsirohirepo/search/">Search</a><a class="page-link" href="/kushsirohirepo/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
@@ -72,7 +87,7 @@
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># variable of type string</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">"Kush Sirohi"</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Kush Sirohi&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
 <span class="c1"># variable of type integer</span>
@@ -83,23 +98,23 @@
 
 <span class="c1"># variable of type dictionary </span>
 <span class="n">Kush</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Kush"</span><span class="p">,</span>
-    <span class="s2">"age"</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-    <span class="s2">"height"</span><span class="p">:</span> <span class="s2">"6 foot"</span><span class="p">,</span>
-    <span class="s2">"school"</span><span class="p">:</span> <span class="s2">"DNHS"</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Kush&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="s2">&quot;height&quot;</span><span class="p">:</span> <span class="s2">&quot;6 foot&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;school&quot;</span><span class="p">:</span> <span class="s2">&quot;DNHS&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">Kush</span><span class="p">)</span>
 
 
 <span class="c1"># list </span>
-<span class="n">grocery</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"milk"</span><span class="p">,</span> <span class="s2">"eggs"</span><span class="p">,</span> <span class="s2">"bread"</span><span class="p">,</span> <span class="s2">"fruits"</span><span class="p">,</span> <span class="s2">"veggies"</span><span class="p">,</span> <span class="s2">"drinks"</span><span class="p">]</span>
+<span class="n">grocery</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;milk&quot;</span><span class="p">,</span> <span class="s2">&quot;eggs&quot;</span><span class="p">,</span> <span class="s2">&quot;bread&quot;</span><span class="p">,</span> <span class="s2">&quot;fruits&quot;</span><span class="p">,</span> <span class="s2">&quot;veggies&quot;</span><span class="p">,</span> <span class="s2">&quot;drinks&quot;</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">grocery</span><span class="p">)</span>
 
 
 
 <span class="c1"># printing only odd list values</span>
-<span class="n">grocery</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"milk"</span><span class="p">,</span> <span class="s2">"eggs"</span><span class="p">,</span> <span class="s2">"bread"</span><span class="p">,</span> <span class="s2">"fruits"</span><span class="p">,</span> <span class="s2">"veggies"</span><span class="p">,</span> <span class="s2">"drinks"</span><span class="p">]</span>
+<span class="n">grocery</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;milk&quot;</span><span class="p">,</span> <span class="s2">&quot;eggs&quot;</span><span class="p">,</span> <span class="s2">&quot;bread&quot;</span><span class="p">,</span> <span class="s2">&quot;fruits&quot;</span><span class="p">,</span> <span class="s2">&quot;veggies&quot;</span><span class="p">,</span> <span class="s2">&quot;drinks&quot;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">3</span><span class="p">):</span> 
     <span class="nb">print</span><span class="p">(</span><span class="n">grocery</span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">])</span>
 </pre></div>
@@ -116,8 +131,8 @@
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Kush Sirohi
 15
-{'name': 'Kush', 'age': 15, 'height': '6 foot', 'school': 'DNHS'}
-['milk', 'eggs', 'bread', 'fruits', 'veggies', 'drinks']
+{&#39;name&#39;: &#39;Kush&#39;, &#39;age&#39;: 15, &#39;height&#39;: &#39;6 foot&#39;, &#39;school&#39;: &#39;DNHS&#39;}
+[&#39;milk&#39;, &#39;eggs&#39;, &#39;bread&#39;, &#39;fruits&#39;, &#39;veggies&#39;, &#39;drinks&#39;]
 milk
 bread
 veggies
@@ -135,13 +150,33 @@ veggies
 
 
 
-  </div><!-- from https://github.com/utterance/utterances -->
-<script src="https://utteranc.es/client.js"
-        repo="kushsirohi123/kushsirohirepo"
-        issue-term="title"
-        label="blogpost-comment"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script><a class="u-url" href="/kushsirohirepo/jupyter/week2/2022/09/20/pythonlists&dictionaries.html" hidden></a>
-</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/kushsirohirepo/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://kushsirohi123.github.io/kushsirohirepo/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/kushsirohirepo/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>The first project.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
