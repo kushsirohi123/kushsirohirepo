@@ -193,6 +193,64 @@ categories: [SCHOOL]</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb Cell 5</span> in <span class="ansi-cyan-fg">&lt;cell line: 22&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=21&#39;&gt;22&lt;/a&gt;</span> if __name__ == &#34;__main__&#34;:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=22&#39;&gt;23&lt;/a&gt;</span>     # print parameter supplied image
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=23&#39;&gt;24&lt;/a&gt;</span>     green_square = image_data(images=[{&#39;source&#39;: &#34;Internet&#34;, &#39;label&#39;: &#34;Green Square&#34;, &#39;file&#39;: &#34;green-square-16.png&#34;}])
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=24&#39;&gt;25&lt;/a&gt;</span>     image_display(green_square)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=26&#39;&gt;27&lt;/a&gt;</span>     # display default images from image_data()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=27&#39;&gt;28&lt;/a&gt;</span>     default_images = image_data()
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb Cell 5</span> in <span class="ansi-cyan-fg">image_display</span><span class="ansi-blue-fg">(images)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=15&#39;&gt;16&lt;/a&gt;</span> def image_display(images):
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=16&#39;&gt;17&lt;/a&gt;</span>     for image in images:  
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#W4sZmlsZQ%3D%3D?line=17&#39;&gt;18&lt;/a&gt;</span>         display(Image(filename=image[&#39;filename&#39;]))
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:957</span>, in <span class="ansi-cyan-fg">Image.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata, alt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    955</span> self.unconfined = unconfined
+<span class="ansi-green-intense-fg ansi-bold">    956</span> self.alt = alt
+<span class="ansi-green-fg">--&gt; 957</span> super(Image, self).__init__(data=data, url=url, filename=filename,
+<span class="ansi-green-intense-fg ansi-bold">    958</span>         metadata=metadata)
+<span class="ansi-green-intense-fg ansi-bold">    960</span> if self.width is None and self.metadata.get(&#39;width&#39;, {}):
+<span class="ansi-green-intense-fg ansi-bold">    961</span>     self.width = metadata[&#39;width&#39;]
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:327</span>, in <span class="ansi-cyan-fg">DisplayObject.__init__</span><span class="ansi-blue-fg">(self, data, url, filename, metadata)</span>
+<span class="ansi-green-intense-fg ansi-bold">    324</span> elif self.metadata is None:
+<span class="ansi-green-intense-fg ansi-bold">    325</span>     self.metadata = {}
+<span class="ansi-green-fg">--&gt; 327</span> self.reload()
+<span class="ansi-green-intense-fg ansi-bold">    328</span> self._check_data()
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:992</span>, in <span class="ansi-cyan-fg">Image.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    990</span> &#34;&#34;&#34;Reload the raw data from file or URL.&#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    991</span> if self.embed:
+<span class="ansi-green-fg">--&gt; 992</span>     super(Image,self).reload()
+<span class="ansi-green-intense-fg ansi-bold">    993</span>     if self.retina:
+<span class="ansi-green-intense-fg ansi-bold">    994</span>         self._retina_shape()
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/IPython/core/display.py:353</span>, in <span class="ansi-cyan-fg">DisplayObject.reload</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    351</span> if self.filename is not None:
+<span class="ansi-green-intense-fg ansi-bold">    352</span>     encoding = None if &#34;b&#34; in self._read_flags else &#34;utf-8&#34;
+<span class="ansi-green-fg">--&gt; 353</span>     with open(self.filename, self._read_flags, encoding=encoding) as f:
+<span class="ansi-green-intense-fg ansi-bold">    354</span>         self.data = f.read()
+<span class="ansi-green-intense-fg ansi-bold">    355</span> elif self.url is not None:
+<span class="ansi-green-intense-fg ansi-bold">    356</span>     # Deferred import
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;images/green-square-16.png&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -522,6 +580,53 @@ categories: [SCHOOL]</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb Cell 10</span> in <span class="ansi-cyan-fg">&lt;cell line: 128&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=126&#39;&gt;127&lt;/a&gt;</span> # Jupyter Notebook Visualization of Images
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=127&#39;&gt;128&lt;/a&gt;</span> if __name__ == &#34;__main__&#34;:
+<span class="ansi-green-fg">--&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=128&#39;&gt;129&lt;/a&gt;</span>     for ido in image_objects(): # ido is an Imaged Data Object
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=130&#39;&gt;131&lt;/a&gt;</span>         print(&#34;---- meta data -----&#34;)
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=131&#39;&gt;132&lt;/a&gt;</span>         print(ido.label)
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb Cell 10</span> in <span class="ansi-cyan-fg">image_objects</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=117&#39;&gt;118&lt;/a&gt;</span> path, images = image_data()
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=118&#39;&gt;119&lt;/a&gt;</span> for image in images:
+<span class="ansi-green-fg">--&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=119&#39;&gt;120&lt;/a&gt;</span>     id_Objects.append(Image_Data(source=image[&#39;source&#39;], 
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=120&#39;&gt;121&lt;/a&gt;</span>                               label=image[&#39;label&#39;],
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=121&#39;&gt;122&lt;/a&gt;</span>                               file=image[&#39;file&#39;],
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=122&#39;&gt;123&lt;/a&gt;</span>                               path=path,
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=123&#39;&gt;124&lt;/a&gt;</span>                               ))
+<span class="ansi-green-intense-fg ansi-bold">    &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=124&#39;&gt;125&lt;/a&gt;</span> return id_Objects
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb Cell 10</span> in <span class="ansi-cyan-fg">Image_Data.__init__</span><span class="ansi-blue-fg">(self, source, label, file, path, baseWidth)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=15&#39;&gt;16&lt;/a&gt;</span> self._baseWidth = baseWidth
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=17&#39;&gt;18&lt;/a&gt;</span> # Open image and scale to needs
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=18&#39;&gt;19&lt;/a&gt;</span> self._img = pilImage.open(self._filename)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=19&#39;&gt;20&lt;/a&gt;</span> self._format = self._img.format
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-07-AP-unit2.2.ipynb#X12sZmlsZQ%3D%3D?line=20&#39;&gt;21&lt;/a&gt;</span> self._mode = self._img.mode
+
+File <span class="ansi-green-fg">~/opt/anaconda3/lib/python3.9/site-packages/PIL/Image.py:3227</span>, in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(fp, mode, formats)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3224</span>     filename = fp
+<span class="ansi-green-intense-fg ansi-bold">   3226</span> if filename:
+<span class="ansi-green-fg">-&gt; 3227</span>     fp = builtins.open(filename, &#34;rb&#34;)
+<span class="ansi-green-intense-fg ansi-bold">   3228</span>     exclusive_fp = True
+<span class="ansi-green-intense-fg ansi-bold">   3230</span> try:
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/images/green-square-16.png&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -552,7 +657,33 @@ categories: [SCHOOL]</p>
 <li>There are many effects you can do as well with PIL. Blur the image or write Meta Data on screen, aka Title, Author and Image size.</li>
 </ul>
 </blockquote>
-
+<h1 id="notes">notes<a class="anchor-link" href="#notes"> </a></h1><h3 id="2.2-blog-notes">2.2 blog notes<a class="anchor-link" href="#2.2-blog-notes"> </a></h3><ul>
+<li>lossy compression, remove some of the image itself, not fully scalabale to its original </li>
+<li>lossless compression, make the image smaller but scalable to its original </li>
+</ul>
+<h3 id="What-are-commands-you-use-in-terminal-to-access-files">What are commands you use in terminal to access files<a class="anchor-link" href="#What-are-commands-you-use-in-terminal-to-access-files"> </a></h3><ul>
+<li>I use ls, cd, open, those are some the the commands I use on mac
+#### What are the command you use in Windows terminal to access files?</li>
+<li>I dont use windows
+#### What are some of the major differences?</li>
+<li>They are different operating systems, so I would image that they would have different commands and different paths </li>
+</ul>
+<h3 id="Why-is-path-a-big-deal-when-working-with-images?">Why is path a big deal when working with images?<a class="anchor-link" href="#Why-is-path-a-big-deal-when-working-with-images?"> </a></h3><ul>
+<li>my guess would be to locate the image on your computer to display on the project or blog
+### How does the meta data source and label relate to Unit 5 topics?</li>
+<li>My guess would be to store the image in the backend, or recieve user data from it. </li>
+</ul>
+<h2 id="Translate-first-3-letters-of-your-name-to-Base64.">Translate first 3 letters of your name to Base64.<a class="anchor-link" href="#Translate-first-3-letters-of-your-name-to-Base64."> </a></h2><ul>
+<li>a3Vx</li>
+</ul>
+<h3 id="BytesIO">BytesIO<a class="anchor-link" href="#BytesIO"> </a></h3><h4 id="Where-have-you-been-a-consumer-of-buffering?">Where have you been a consumer of buffering?<a class="anchor-link" href="#Where-have-you-been-a-consumer-of-buffering?"> </a></h4><ul>
+<li>when im watching vides online, or when I am trying to load up a site on bad wifi
+From your consumer experience, what effects have you experienced from buffering?</li>
+<li>It makes my user expereince less enjoyable 
+How do these effects apply to images?</li>
+<li>Im guessing it takes time for these images to load up </li>
+</ul>
+<h1 id="PIL">PIL<a class="anchor-link" href="#PIL"> </a></h1><h1 id="numpy">numpy<a class="anchor-link" href="#numpy"> </a></h1><h1 id="base64">base64<a class="anchor-link" href="#base64"> </a></h1>
 </div>
 </div>
 </div>
