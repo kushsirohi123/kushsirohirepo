@@ -46,17 +46,6 @@
   
     
         ,"post4": {
-            "title": "Docker server",
-            "content": "",
-            "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/09/19/docker-server.html",
-            "relUrl": "/markdown/2022/09/19/docker-server.html",
-            "date": " • Sep 19, 2022"
-        }
-        
-    
-  
-    
-        ,"post5": {
             "title": "DNHS BELL SCHEDULE",
             "content": "Monday, Tuesday, Thursday . Period Start Time End Time . Period 1 | 8:35 AM | 9:44 AM | . Period 2 | 9:49 AM | 10:58 AM | . Break | 10:58 AM | 11:08 AM | . Period 3 | 11:13 AM | 12:22 PM | . Lunch | 12:22 PM | 12:52 PM | . Period 4 | 12:57 PM | 2:06 PM | . Office Hours | 2:06 PM | 2:31 PM | . Period 5 | 2:36 PM | 3:45 PM | . Wednesday . Period Start Time End Time . Period 1 | 9:55 AM | 10:53 AM | . Period 2 | 10:58 AM | 11:56 AM | . Break | 11:56 AM | 12:06 pM | . Period 3 | 12:11 PM | 1:09 PM | . Lunch | 1:09 PM | 1:39 PM | . Period 4 | 1:44 PM | 2:42 PM | . Office Hours | 2:06 PM | 2:31 PM | . Period 5 | 2:47 PM | 3:45 PM | . Friday . Period Start Time End Time . Period 1 | 8:35 AM | 9:49 AM | . Period 2 | 9:54 AM | 11:08 AM | . Break | 11:08 AM | 11:18 AM | . Period 3 | 11:23 AM | 12:37 PM | . Lunch | 12:37 PM | 1:07 PM | . Period 4 | 1:12 PM | 2:26 PM | . Period 5 | 2:31 PM | 3:45 PM | . .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/09/05/schedule.html",
@@ -67,7 +56,7 @@
     
   
     
-        ,"post6": {
+        ,"post5": {
             "title": "Collegeboard",
             "content": "COllEGE BOARD . . . . What I have been doing with the quizzes recently, is just looking at the code and try to find the most logical answer that I can get from the syntax shows. An example is, if, while, and for. I know what all these mean, but I dont know how to implement them into my own programming. With this quiz, it made me think more logically. The question I got wrong, I had trouble with the syntax, and thats why I didnt understand. In the future, I will study the syntax. .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/2022/09/05/collegeboard.html",
@@ -78,40 +67,7 @@
     
   
     
-        ,"post7": {
-            "title": "PHYSICS NOTES",
-            "content": "Velocity lab Purpose: . To understand the difference between displacement and position. | To calculate an average velocity. | To analyze average velocity by using a graph. | To extrapolate from a graph. | To see the relationship between displacement, time, and average speed. Process: Use chalk or blue tape to mark off 1 meter sections on the floor, up to 5 meters. Run the Tumble Buggy several times and decide how you are going to measure the start and stop times. | . | Use a stopwatch to measure the time it takes the Buggy to travel from 0 to 1 meters, 0 to 2 meters, 0 to 3 meters, 0 to 4 meters, and 0 to 5 meters. Do 3 trials for all distances and take an average time for each distance. Create a clean and easy-to-follow table to input all of the numbers from the above process. | Graph: Create a full-page graph with position (meters) on the y-axis and average time (seconds) on the x-axis. Label this the “slow car”. What would a car that moves twice as fast look like on this graph? Using another color, create another line on the same graph showing how a hypothetical “fast car” would travel if the “fast car” can go 2 times faster than the “slow car”. Using a third color, create another line on the same graph showing the “slow car” traveling in the opposite direction (have the car start at 5 m and move to 0 m). Label this “reverse car.” | Analysis: Calculate the slope of each line. What are the units associated with the slope? What does this imply about the meaning of the value of the slope? Does the slope change? What does this indicate about the motion of the car? Which car is associated with the greater slope? What general statement can be made that relates the slope of the best fit line to the speed of the car? Determine the time it took for the slow car to reach the 2.5 m mark. Where was slow car at the time t = 12.5 s? Based on the data you collected, how long would it take the fast car to get to a six meter mark? Where would the slow car be after 12 seconds? Using the relationships between change in position and the change in time, predict how long it would take the fast car to travel 45 m. What would be the change in the position of the slow car after 50 s? What would be the average speed of the slow car if it traveled from the zero to the five meter mark (use the time from your data table)? Average velocity? What would be the average speed of the slow car if it traveled from the zero to the five meter mark and back to the zero mark (double the time)? Average velocity? | . Acceleration Lab Analysis Questions . What are the units of the slope for your velocity vs time graph? What does the slope represent? . | The slope represents the acceleration of the object and the units are meters per second (m/s).  . | Describe the shape of the position vs time graphs. What does the shape of your position time graph tell you about the motion of the car? . | The shape represents velocity, which is displacement over time. The shape gives detail of the slope, which is the velocity of the position v. time.  . | What shape is the acceleration vs time graph? What does the shape of the graph tell you about the motion of the car? . | The shape is exponential because as the car changed its position downward, the velocity increased.  . | When did the car have the highest acceleration? What causes the cars to accelerate? . | The car had the highest acceleration at the end of the racetrack according to our graphs. What causes the acceleration was the change of velocity the cars experienced on the track depending on the height that they were at.  . | Compare your acceleration values from the kinematic section to the Motion Tracker section of your data. Which was likely more accurate? Explain your reasoning. . | The kinematics section was  likely more accurate. During our motion tracker, there were different variables, such as the slope of the table, the variance in length, and whatnot. Since the kinematics was an equation, I would say it’s more accurate.  . | Examine the velocity time graph below and answer the following. . | Describe the motion of a car that creates this graph. When is the car accelerating, when is its motion constant? . | The car accelerates, then moves with constant velocity, then accelerates, then stops moving altogether. A flat line on a velocity time graph represents a constant motion. A flat line on the x axis on a velocity time graph represents no motion. Lines on a velocity time graph with slopes that are not 0 represent motion. . | Calculate the acceleration from 0-14 seconds, 14-44 seconds and 44-54 seconds. . | 0-14: 1.92 m/s^2 14-44: 0 m/s^2 44-54: -4 m/s^2 . Sketch a velocity vs time graph that is speeding up in the negative direction. |",
-            "url": "https://kushsirohi123.github.io/kushsirohirepo/school/2022/08/28/PHYSICSNOTES.html",
-            "relUrl": "/school/2022/08/28/PHYSICSNOTES.html",
-            "date": " • Aug 28, 2022"
-        }
-        
-    
-  
-    
-        ,"post8": {
-            "title": "PHOTOGRAPHY NOTES",
-            "content": ".",
-            "url": "https://kushsirohi123.github.io/kushsirohirepo/school/2022/08/28/PHOTOGRAPHY.html",
-            "relUrl": "/school/2022/08/28/PHOTOGRAPHY.html",
-            "date": " • Aug 28, 2022"
-        }
-        
-    
-  
-    
-        ,"post9": {
-            "title": "APCSP NOTES",
-            "content": "week 0 . created a fastpages website | uploaded a jupyter file | uploaded a markdown file week 1 . | Worked on fastpages | Added more elements to my fastpages | created a calculator with python week 2 . | used html fragments | Added vocab | logged physics work inside fastpages | added more elements to my fastpages such as vocab and colors | parallax effect added | learned how to use tables week 3 . | Worked on app lab | made a quiz | logged my data in fastpages week 4 . | created a fastpages server | created a flask python server | made a video detailing both | .",
-            "url": "https://kushsirohi123.github.io/kushsirohirepo/school/2022/08/28/APCSP.html",
-            "relUrl": "/school/2022/08/28/APCSP.html",
-            "date": " • Aug 28, 2022"
-        }
-        
-    
-  
-    
-        ,"post10": {
+        ,"post6": {
             "title": "First Markdown Post",
             "content": "Markdown is a type of language that similar to html, in the aspect that they both are markup languages . print(&quot;You can also use python&quot;) . this | is a | ordered list | Big heading . Sorta big heading . Small heading .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/08/21/markdownpost-(1).html",
@@ -122,7 +78,7 @@
     
   
     
-        ,"post11": {
+        ,"post7": {
             "title": "MCQ3",
             "content": "Overall Score: 94% . . Overall Reflection . I found that when I spend more time analyzing each question, I do better on these types of quizzes. Every question that I got wrong werent anything too conceptual, but silly mistakes. | . . Question 22 . . . Answer explanation . Here I chose choice B, while the answer was choice A. You can see, the code iterates in a way that if the arrow can rotate right, it will rotate right. Then, if the arrow can rotate left, it will rotate left. Finally, if the arrow can rotate forward, it will rotate forward. With grid I, it will rotate forward until it hits the side, rotate right twice, and go down until it hits the middle row, then it will rotate right and go forward. After that, it will rotate left and go until it reaches the top row. After, it will rotate left until it hits the destination. . Why did I get this wrong . I simple terms, I rushed this question and did not evaluate option A. I evaluated option B and made an error in my judgement . . Question 33 . . Answer explanation and why I got it wrong . . Here, I chose choice C when the correct answer was choice A. The code segment moves it right, forward, left, forward, and right. It does that 4 times. When I was going thru the steps in my head, it seemed correct that it would go thru 3 times. When I looked at it again just now, I saw that it would only need to repeat twice and repeating it 3 times would leave it three rows above its starting position and one row above the gray square. . . Question 35 . . Answer explanation and why I got it wrong . I picked choice C, when instead I should have picked choice A. The reason I got this incorrect was that I rushed thru this question and did not consider the other choices. Choice A is correct, because if team A has more points than team B, they win. If the first condition is wrong, that mean team B has more points and if team B has more points than team C, they win. If with the else statement, if Team C has more points than A and B, then they win. .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/school/2022/03/12/CBmcq3.html",
@@ -133,18 +89,7 @@
     
   
     
-        ,"post12": {
-            "title": "5.3 5.4",
-            "content": "Google “What age groups use Facebook” vs “… TikTok”? What does the data say? Is there purposeful exclusion in these platforms? Is it harmful? Should it be corrected? Is it good business? . Facebook has an older age range, typically, the users of facebook are 24 - 35. . Why do virtual assistants have female voices? Amazon, Alexa Google, Apple Siri. Was this purposeful? Is it harmful? Should it be corrected? Is it good business? . Female voice can usually being trusted by human and humans have preference. I would not consider it harmful, because the same thing would go it it was a male saying it. . Talk about an algorithm that influences your decisions, think about these companies (ie FAANG - Facebook, Amazon, Apple,Netflix, Google) . Does the owner of the computer think this was intentional? Yes, he think this is intentional because he think it’s racist. . How do you think this happened? . The company didn’t run enough test to test this function. . Is this harmful? Was it intended to be harmful or exclude? . Yes, since it discriminates to a certain group of people . Should it be corrected? . Yes, this should be corrected. . What would you or should you do to produce a better outcome? . You an increase the sample size . We have all experienced Crowdsourcing by using external data through API’s, namely RapidAPI. This data has influenced how we code and shown possibilities in obtaining and analyzing data. Discuss APIs you have used. . We used a stock api to import stock data. . Describe a crowdsource idea and how you might initiate it in our environment? . People can contribute thru . . What about Del Norte crowdsourcing? Could your project be better with crowdsourcing? . Yes, the crowdsourcing can give more ideas on how to improve your project and how the project will have all the function working well. . What kind of data could you capture at N@tM to make evening interesting? Perhaps use this data to impress Teachers during finals week. . We can show survey data from interviewing people on our jpriject. .",
-            "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/02/13/5.15.2blognotes.html",
-            "relUrl": "/markdown/2022/02/13/5.15.2blognotes.html",
-            "date": " • Feb 13, 2022"
-        }
-        
-    
-  
-    
-        ,"post13": {
+        ,"post8": {
             "title": "Project Blog",
             "content": "Future Feature: Learning Module . Program purpose and function . The purpose of the learning feature will make a module where users can learn about day trading, and in the end they could take a quiz that would . Data Abstraction . I would use lists, classes, dictionaries to hold the value for the quiz . Procedural Abstraction . I would use a function that allowed me to make a checkpoint, so when you resolve the help description, it would see that you read it and would complete the training module for that part. . Algorithm Implementation . I would create an algorithm that checks if the user has completed the training module and accordinly notifies the user to do that. .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/school/2022/01/31/projectblog.html",
@@ -155,7 +100,7 @@
     
   
     
-        ,"post14": {
+        ,"post9": {
             "title": "College Board Questions",
             "content": "My errors . Question 1 . . In this question, the answer I chose did not correspond with the rules of the program. X=3, Y=2 Z=1 does satisfy the conditions of the program . . In this question, the answer I chose did satisfy the conditons since if you go thru the program, it leads to that destination. The question asked which one DIDNT satisfy the conditons, and if you go thru the steps of the program, you can see that D does not satisfy the conditons of this program . . In this question, I didnt look at all of the choices that I had. I only picked the one. . . In this question, I had misread the signs. If I had chosen J&gt;7, it would result in a infitie loop because there are an infinte number of numbers after 7 . . ## . . . ## . Question 1 .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/01/31/collegeboardquestions.html",
@@ -166,7 +111,7 @@
     
   
     
-        ,"post15": {
+        ,"post10": {
             "title": "5.1 5.2 blog NOTES",
             "content": "5.1, 5.2 blog . Think of three beneficial effects of your projects based on 5.1 Unit . It can help users with learning market patterns and knowing when to invest | It simulates real results without losing any money while day trading | It provides data of the stock market directly to the | . Think of a potential harmful effect of your project. . Our platform is just a simulation so the user does not gain nor lose money. If they get too confident it could lead to them losing money when day trading with real money. | . Answer with an opinion and learnings so far this year: What are pros/cons on internet blockers at router and lack of admin password on lab machines at school? . Pros: . It restricts users from innapporpriate websites | Restricts the user from accessing malicous websites | keeps the user focused from distractions that could come from unrestricted sites | . Cons: . Sometimes it restricts websites could be used for academic purposes | . What concerns do you have personally about the digital divide? For yourself or for others. . For others, they may not have the same resources that others have, which could lead them to be less educated. Also, everybody deserves to know the truth, because without it we can be controlled by others. | .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/school/2022/01/29/5.1,-5.2-blog.html",
@@ -177,7 +122,7 @@
     
   
     
-        ,"post16": {
+        ,"post11": {
             "title": "GradingPart3",
             "content": "Student 1 . | Category | My score | College board | Commentary | | ———— | ————- | ————- | ————- | | Program Purpose and Function| 0 | 1 | The student does not show that he has a clear understanding of the program function and purpose and does not show the program function. | Data Abstraction|0 | 0 |The program does not show that the student has a an understanding of data abstraction| | Managing Complexity| 0 | 0 | The program does not understanding of managing complexity. When it comes to implementing the complexity, there is not enough material | | Procedural Abstraction | 0 | 0 | The program does not show understanding of procedural abstraction and implements it to improve the program’s functionality. | | Algorithm Implementation | 1 | 0 | The program shows an understanding of algorithm implementation and implemets it well. | Testing | 1| 1|the student clearly demonstrates the program and its code| . Student 2 . | Category | My score | College board | Commentary | | ———— | ————- | ————- | ————- | | Program Purpose and Function| 1 | 1 | The student shows that he has a clear understanding of the program function and†ns purpose and does show the program function. | Data Abstraction|1 | 1 |The program shows that the sudent has an understanding of data abstraction and it to improve the program’s functionality. | | Managing Complexity| 1| 1 | The program shows a good understanding of managing complexity. When it comes to implementing the complexity, the student does that well | | Procedural Abstraction | 1 | 1 | The program shows a base understanding of procedural abstraction and implements it to improve the program’s functionality. | | Algorithm Implementation | 1 | 1 | The program shows an understanding of algorithm implementation and implemets it well. | Testing | 1| 1| the student clearly demonstrates the program and its code| . Student 3 . | Category | My score | College board | Commentary | | ———— | ————- | ————- | ————- | | Program Purpose and Function| 1 | 1 | The student shows that he has a clear understanding of the program function and purpose and does show the program function. | Data Abstraction|0 | 0 |The program doess not show that the sudent has an understanding of data abstraction . | | Managing Complexity| 1 | 0 | The program shows a good understanding of managing complexity. When it comes to implementing the complexity, the student does that well | | Procedural Abstraction | 0 | 0 | The program does not show a base understanding of procedural abstraction and implements it to improve the program’s functionality. | | Algorithm Implementation | 0 | 0 | The student gives a minimal description of the program algorithm | Testing | 0| 0| The student does not clearly demonstrates the program and its code| . Student 4 . | Category | My score | College board | Commentary | | ———— | ————- | ————- | ————- | | Program Purpose and Function| 1 | 1 | The student shows that he has a clear understanding of the program function and purpose and does show the program function. | Data Abstraction|1 | 1 |The program shows that the sudent has a an understanding frejuyof data abstraction and it to improve the program’s functionality. | | Managing Complexity| 1 | 1 | The program shows a good understanding of managing complexity. When it comes to implementing the complexity, the student does that well | | Procedural Abstraction | 1 | 1 | The program shows a base understanding of procedural abstraction and implements it to improve the program’s functionality. | | Algorithm Implementation | 1 | 0 | The student gives a minimal description of the program algorithm| | Testing | 1| 1| The student clearly demonstrates the program and its code| .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/01/23/GradingPart3.html",
@@ -188,7 +133,7 @@
     
   
     
-        ,"post17": {
+        ,"post12": {
             "title": "GradingPart2",
             "content": "Student 1 . | Category | My score | College board | Commentary | | ———— | ————- | ————- | ————- | | Program Purpose and Function| 1 | 0 | The student shows that he has a clear understanding of the program function and purpose and does show the program function. | Data Abstraction|1 | 0 |The program shows that the student has a an understanding of data abstraction and it to improve the program’s functionality. | | Managing Complexity| 1 | 0 | The program shows a good understanding of managing complexity. When it comes to implementing the complexity, the student does that well | | Procedural Abstraction | 1 | 0 | The program shows a base understanding of procedural abstraction and implements it to improve the program’s functionality. | | Algorithm Implementation | 1 | 0 | The program shows a understanding of algorithm implementation and implemets it well. | Testing | 1| 1| the student clearly demonstrates the program and its code| . Student 2 . | Category | My score | College board | Commentary | | ———— | ————- | ————- | ————- | | Program Purpose and Function| 1 | 1 | The student shows that he has a clear understanding of the program function and†ns purpose and does show the program function. | Data Abstraction|1 | 1 |The program shows that the sudent has a an understanding of data abstraction and it to improve the program’s functionality. | | Managing Complexity| 1 | 1 | The program shows a good understanding of managing complexity. When it comes to implementing the complexity, the student does that well | | Procedural Abstraction | 1 | 1 | The program shows a base understanding of procedural abstraction and implements it to improve the program’s functionality. | | Algorithm Implementation | 1 | 1 | The program shows a understanding of algorithm implementation and implemets it well. | Testing | 1| 1| the student clearly demonstrates the program and its code| . Student 3 . | Category | My score | College board | Commentary | | ———— | ————- | ————- | ————- | | Program Purpose and Function| 1 | 0 | The student shows that he has a clear understanding of the program function and purpose and does show the program function. | Data Abstraction|1 | 0 |The program shows that the sudent has a an understanding of data abstraction and it to improve the program’s functionality. | | Managing Complexity| 1 | 0 | The program shows a good understanding of managing complexity. When it comes to implementing the complexity, the student does that well | | Procedural Abstraction | 1 | 0 | The program shows a base understanding of procedural abstraction and implements it to improve the program’s functionality. | | Algorithm Implementation | 0 | 0 | The code is not complex | Testing | 1| 1| the student clearly demonstrates the program and its code| . Student 4 . | Category | My score | College board | Commentary | | ———— | ————- | ————- | ————- | | Program Purpose and Function| 1 | 0 | The student shows that he has a clear understanding of the program function and purpose and does show the program function. | Data Abstraction|1 | 0 |The program shows that the sudent has a an understanding frejuyof data abstraction and it to improve the program’s functionality. | | Managing Complexity| 1 | 0 | The program shows a good understanding of managing complexity. When it comes to implementing the complexity, the student does that well | | Procedural Abstraction | 1 | 0 | The program shows a base understanding of procedural abstraction and implements it to improve the program’s functionality. | | Algorithm Implementation | 0 | 0 | There is not much algorithm implementation, I just see code | 1| 1| the student clearly demonstrates the program and its code| .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/markdown/2022/01/23/GradingPart2.html",
@@ -199,7 +144,7 @@
     
   
     
-        ,"post18": {
+        ,"post13": {
             "title": "CPT blog",
             "content": "Student 1 Reflection . Category Student 1 Student 2 College board Student grade Commentary     . Purpose Function | Does describe the overall purpose of the program, as well as the functionality. The input and outpit of the program was described in the video | Does describe the overall purpose of the program, as well as the functionality. The input and outpit of the program was described in the video. | 0/1 | 1/1 | Content Cell |   |   | . Data Abstraction | They do show the the two program code segments, and shos how data has been stores as well. The data in the list relates to the purpose of fullfilling the program purpose | They do show the the two program code segments, and shos how data has been stores as well. The data in the list relates to the purpose of fullfilling the program purpose | 1/1 | 1/1 | Content Cell |   |   | . Managing Complexity | Including a program code segment that shows the complexity in the program | Including a program code segment that shows the complexity in the program | 1/1 | 0/1 | Content Cell |   |   | . Procedure Abstraction | The program includes the necessary segments, one where it is shown that the student develops the procedure with at least one parameter, and one that shows what the procedure is called | The program includes the necessary segments, one where it is shown that the student develops the procedure with at least one parameter, and one that shows what the procedure is called | 1/1 | 1/1 | Content Cell |   |   | . Algorithm Implementation | All of the program code is there, sequencing, selection, iteration, and is explained in detailed steps how the algorithm works. | All of the program code is there, sequencing, selection, iteration, and is explained in detailed steps how the algorithm works | 1/1 | 1/1 | Content Cell |   |   | . Testing | All conditions were tested, and the result was outputted correctly based on the conditions given | All conditions were tested, and the result was outputted correctly based on the conditions given |   | 1/1 | 1/1 | Content Cell | Content Cell | . Student 1 reflection: . - The program served its main served its main purpose, which was giving information of a triangle based on the input. - They lost points on the first critera from collegeboard because even though they showed the input and output, they did not specify the program purpose, instead they described the code/function itself - They lost points on the create preformance task because they did not include an accurate explanition of how the program could be written differently without lists, and how lists are beneficial to the program . Student 2 . The student earned points on all of the criteria. The program’s main purpose is to serve as entertainment for the user, and the program allows the user to place and remove tiles on a grid, which are progressed programatticly by the rules of Game of life, quoting collegeboard. | | .",
             "url": "https://kushsirohi123.github.io/kushsirohirepo/2022/01/23/GradingPart1.html",
@@ -268,12 +213,10 @@
   
 
   
-
-  
   
 
   
-      ,"page14": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://kushsirohi123.github.io/kushsirohirepo/robots.txt",
