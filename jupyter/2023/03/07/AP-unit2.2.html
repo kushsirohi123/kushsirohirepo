@@ -85,46 +85,28 @@ window.onload = wrap_img;
 </blockquote>
 <h3 id="IPython">IPython<a class="anchor-link" href="#IPython"> </a></h3><blockquote><p>Support visualization of data in Jupyter notebooks.  Visualization is specific to View, for the web visualization needs to be converted to HTML.</p>
 </blockquote>
-<h3 id="pathlib">pathlib<a class="anchor-link" href="#pathlib"> </a></h3><blockquote><p>File paths are different on Windows versus Mac and Linux.  This can cause problems in a project as you work and deploy on different Operating Systems (OS's), pathlib is a solution to this problem.</p>
+<h3 id="pathlib">pathlib<a class="anchor-link" href="#pathlib"> </a></h3><p>File paths are different on Windows versus Mac and Linux.  This can cause problems in a project as you work and deploy on different Operating Systems (OS's), pathlib is a solution to this problem. 
+What are commands you use in terminal to access files?</p>
 <ul>
-<li>What are commands you use in terminal to access files?<ul>
-<li>I use cd, cd, locate, mkdir, rmdir, and others when I need them</li>
-</ul>
-</li>
-<li>What are the command you use in Windows terminal to access files?<ul>
-<li>I dont use windows so I wouldnt know, but during the lecture I heard there were some difference</li>
-</ul>
-</li>
-<li>What are some of the major differences?<ul>
-<li>The OS is different, meaning different file paths and whatnot</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<p>Provide what you observed, struggled with, or leaned while playing with this code.
-<br /></p>
-<ul>
+<li>I use cd, cd, locate, mkdir, rmdir, and others when I need them
+What are the command you use in Windows terminal to access files?</li>
+<li>I dont use windows so I wouldnt know, but during the lecture I heard there were some difference
+What are some of the major differences?</li>
+<li>The OS is different, meaning different file paths and whatnot
+Provide what you observed, struggled with, or leaned while playing with this code.
+<br /></li>
 <li>I saw how the libraries work, the different functions needed to grayscale the images. I played with it and also figured out how to color the images in a different scale, such as pinkscale. I also learned the importance of path, because otherwise the image doesnt show up. 
 <br /><br />
+<img src="/kushsirohirepo/images/copied_from_nb/../images/imagepath.png" alt="Image" />
 <br />
-<img src="/kushsirohirepo/images/copied_from_nb/../images/imagepath.png" alt="Image" /></li>
-</ul>
-<p><br />
 Why is path a big deal when working with images?
+<br /></li>
+<li>If the path is incorrect, the image would not show up because the location is incorrect
 <br />
-<br /></p>
-
-<pre><code>- If the path is incorrect, the image would not show up because the location is incorrect
-</code></pre>
-<p><br /></p>
-<p>How does the meta data source and label relate to Unit 5 topics?
-<br />
-<br /></p>
-
-<pre><code>- Meta data is the data behind an image. I would imagine that this data would be stored on a database for later access
-</code></pre>
-<p>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</p>
-<ul>
+How does the meta data source and label relate to Unit 5 topics?
+<br /></li>
+<li>Meta data is the data behind an image. I would imagine that this data would be stored on a database for later access
+Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</li>
 <li>From what I see online, IPython is a kernel for jupyter that allows for data visualization. My guess would be that you could use IPython to manipulate dataframes, and you could use pandas to display the changes. </li>
 </ul>
 
@@ -218,14 +200,10 @@ Why is path a big deal when working with images?
 <h2 id="Reading-and-Encoding-Images-(2-implementations-follow)">Reading and Encoding Images (2 implementations follow)<a class="anchor-link" href="#Reading-and-Encoding-Images-(2-implementations-follow)"> </a></h2><h3 id="PIL-(Python-Image-Library)">PIL (Python Image Library)<a class="anchor-link" href="#PIL-(Python-Image-Library)"> </a></h3><blockquote><p><a href="https://pillow.readthedocs.io/en/stable/">Pillow or PIL</a> provides the ability to work with images in Python.  <a href="https://www.geeksforgeeks.org/working-images-python/?ref=lbp">Geeks for Geeks</a> shows some ideas on working with images.</p>
 </blockquote>
 <h3 id="base64">base64<a class="anchor-link" href="#base64"> </a></h3><blockquote><p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal?
-    <br />
-    <br /></p>
-
-<pre><code>- Binary, Base64, and Hexadecimal all convert data from one form to another. From my research, Base64 is used to represent groups of bytes 
-&lt;br&gt;
-&lt;br&gt;
-</code></pre>
+<br /></p>
 <ul>
+<li>Binary, Base64, and Hexadecimal all convert data from one form to another. From my research, Base64 is used to represent groups of bytes 
+<br /></li>
 <li>Translate first 3 letters of your name to Base64. Warning, the answer shown below is most likely incorrect, but its the best I could come up with on my own. <ul>
 <li>Kus<ul>
 <li>Convert to Binary 01101011 01110101 01110011</li>
@@ -241,23 +219,13 @@ Why is path a big deal when working with images?
 </blockquote>
 <h3 id="io,-BytesIO">io, BytesIO<a class="anchor-link" href="#io,-BytesIO"> </a></h3><blockquote><p>Input and Output (I/O) is a fundamental of all Computer Programming. Input/output (I/O) buffering is a technique used to optimize I/O operations.  In large quantities of data, how many frames of input the server currently has queued is the buffer.  In this example, there is a very large picture that lags.</p>
 <ul>
-<li>Where have you been a consumer of buffering?<br />
-  <br />
-  <br /><ul>
-<li>When im watching a youtube video or a netflix show, it takes time to load. 
-<br />
-<br /></li>
+<li>Where have you been a consumer of buffering?  <ul>
+<li>When im watching a youtube video or a netflix show, it takes time to load. </li>
 </ul>
 </li>
 <li>From your consumer experience, what effects have you experienced from buffering?<br />
-  <br />
-  <br />
-  I see that it takes time to load, and it typically shows me a percentage sign from 1-100 that shows me how long it takes to load. 
-  <br />
-  <br /></li>
+  I see that it takes time to load, and it typically shows me a percentage sign from 1-100 that shows me how long it takes to load. </li>
 <li>How do these effects apply to images 
-  <br />
-  <br />
   I would imagine that images also need time to load, because of their pixels. </li>
 </ul>
 </blockquote>
