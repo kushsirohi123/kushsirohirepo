@@ -97,10 +97,10 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Schema-of-Users-table-in-Sqlite.db">Schema of Users table in Sqlite.db<a class="anchor-link" href="#Schema-of-Users-table-in-Sqlite.db"> </a></h2><blockquote><p>Uses PRAGMA statement to read schema.</p>
 </blockquote>
-<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema? - the overall layout of a table, that is the schema. It is also how the table can be manipulated with crud functions as well.</p>
+<p>Describe Schema, here is resource <a href="https://www.sqlite.org/index.html">Resource</a>- What is a database schema? - Schema is essentially the category/column of a table.</p>
 <ul>
 <li>What is the purpose of identity Column in SQL database? - It is used to generate key values</li>
-<li>What is the purpose of a primary key in SQL database? - it is so that no two rows have the same values in a primary key column and can be used as reference when working with foreign tables</li>
+<li>What is the purpose of a primary key in SQL database? - it is key column and can be used as reference when working with foreign tables</li>
 <li>What are the Data Types in SQL table? - integer, text, blob</li>
 </ul>
 
@@ -136,7 +136,7 @@ window.onload = wrap_img;
     <span class="c1"># Close the database connection</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     
-<span class="n">schema</span><span class="p">()</span>
+<span class="n">app_schema</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -150,10 +150,11 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(0, &#39;id&#39;, &#39;INTEGER&#39;, 1, None, 1)
-(1, &#39;_name&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
-(2, &#39;_uid&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(1, &#39;_appName&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(2, &#39;_personalUse&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
 (3, &#39;_password&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
-(4, &#39;_dob&#39;, &#39;DATE&#39;, 0, None, 0)
+(4, &#39;_favoriteFeature&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(5, &#39;_uid&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
 </pre>
 </div>
 </div>
@@ -259,10 +260,11 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
 <span class="k">def</span> <span class="nf">create</span><span class="p">():</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name:&quot;</span><span class="p">)</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your user id:&quot;</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your password&quot;</span><span class="p">)</span>
-    <span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your date of birth &#39;YYYY-MM-DD&#39;&quot;</span><span class="p">)</span>
+    <span class="n">appName</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;New name?&quot;</span><span class="p">))</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;New uid?&quot;</span><span class="p">))</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;New password?&quot;</span><span class="p">))</span>
+    <span class="n">personalUse</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;new personal use?&quot;</span><span class="p">))</span>
+    <span class="n">favoriteFeature</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;New Favorite feature?&quot;</span><span class="p">))</span>
     
     <span class="c1"># Connect to the database file</span>
     <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
@@ -272,7 +274,7 @@ window.onload = wrap_img;
 
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Execute an SQL command to insert data into a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (_name, _uid, _password, _dob) VALUES (?, ?, ?, ?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">dob</span><span class="p">))</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;INSERT INTO users (_appName, _uid, _password, _personalUse, _favoriteFeature) VALUES (?, ?, ?, ?,?)&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">appName</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">personalUse</span><span class="p">,</span> <span class="n">favoriteFeature</span><span class="p">))</span>
         
         <span class="c1"># Commit the changes to the database</span>
         <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
@@ -322,8 +324,8 @@ window.onload = wrap_img;
     <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter user id to update&quot;</span><span class="p">)</span>
     <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter updated password&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;hacked&quot;</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;gothackednewpassword123&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;password too small&quot;</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;getanewpassword&#39;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;successfully updated&quot;</span>
 
@@ -420,8 +422,8 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Menu-Interface-to-CRUD-operations">Menu Interface to CRUD operations<a class="anchor-link" href="#Menu-Interface-to-CRUD-operations"> </a></h1><blockquote><p>CRUD and Schema interactions from one location by running menu. Observe input at the top of VSCode, observe output underneath code cell.</p>
 <ul>
-<li>Why does the menu repeat?</li>
-<li>Could you refactor this menu?  Make it work with a List?</li>
+<li>Why does the menu repeat? you have the menu function, which calls itself, which is also called recursion</li>
+<li>Could you refactor this menu?  Make it work with a List? Yes, you could refactor this menu </li>
 </ul>
 </blockquote>
 
@@ -469,7 +471,60 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Error while executing the INSERT: UNIQUE constraint failed: users._uid
+<pre>The row with uid H was successfully deleted
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+
+<span class="c1"># Connect to the SQLite database</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;instance/sqlite.db&#39;</span><span class="p">)</span>
+<span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+
+<span class="c1"># Select all rows from the &quot;dogs&quot; table</span>
+<span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT id, _appName, _uid, _password, _personalUse, _favoriteFeature FROM roof&quot;</span><span class="p">)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+<span class="c1"># Use tabulate to format the rows as a table</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;appName&quot;</span><span class="p">,</span> <span class="s2">&quot;_uid&quot;</span><span class="p">,</span> <span class="s2">&quot;_password&quot;</span><span class="p">,</span> <span class="s2">&quot;_personalUse&quot;</span><span class="p">,</span> <span class="s2">&quot;_favoriteFeature&quot;</span><span class="p">])</span>
+
+<span class="c1"># Print the table</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>    appName    _uid       _password                                                                                 _personalUse                              _favoriteFeature
+--  ---------  ---------  ----------------------------------------------------------------------------------------  ----------------------------------------  ------------------------------
+ 2  youtube    youtube    sha256$06zvP14uqN5U4SDd$dcdfe6bc9ac3aa2e4daadb21daaf2ef87dbd05cd7a79dbc300cdae2020241c51  I use it to host videos and watch videos  I love to watch youtube videos
+ 3  amazon     gmail      sha256$NfEOqcQh8pkS5UFy$cc0f806a3fe9b628f30175d72484835898cc7e24b8366f9645d129230082d588  I use it to buy things                    I like the wishlist feature
+ 5  Netflix    netflix    sha256$elh35v4Oc7wHj0tF$522e5c7eaf695bff33ca610effa5492863c6419452c1f526d972b4e15dc8c26c  Watch Movies                              watching Movies
+ 6  spotify    spotify    sha256$XNxbeuYx23id9ySc$84b587c7a6213b89c87372e7bff7d620fd7c6e51dc069bffb96722cf7591eec8  music listening                           music listening
+ 7  photomath  photomath  sha256$ElMUvfTQ0kEDkNsN$106f8ec2a0b50a836fd3b68969b11427d2cf8a26ced183511c1af59f437c42a2  take pics of math problems and solves it  solves math questions
+ 8  k          k          sha256$fMRio0MmpZ1VvH42$cf61d2320d99675d89c6b74e47ac28d2205939287d542a863109f6a0cab042e6  k                                         k
 </pre>
 </div>
 </div>
