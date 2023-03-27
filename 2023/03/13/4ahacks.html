@@ -447,8 +447,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Created
- {&#39;appName&#39;: &#39;&#39;, &#39;personalUse&#39;: &#39;&#39;, &#39;password&#39;: &#39;sha256$eQb...&#39;, &#39;favoriteFeature&#39;: &#39;&#39;, &#39;uid&#39;: &#39;&#39;}
+<pre>Unknown error uid {uid}
 </pre>
 </div>
 </div>
@@ -469,7 +468,7 @@ window.onload = wrap_img;
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
         <span class="n">table</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-    <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">kush</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">kush</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># &quot;List Comprehensions&quot;, for each user add user.read() to list</span>
+    <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">kush</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">kush</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># &quot;List Comprehensions&quot;, for each guser add user.read() to list</span>
     <span class="k">return</span> <span class="n">json_ready</span>
 
 <span class="n">read</span><span class="p">()</span>
@@ -487,26 +486,36 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[{&#39;appName&#39;: &#39;Netflix&#39;,
-  &#39;personalUse&#39;: &#39;Watching movies&#39;,
-  &#39;password&#39;: &#39;sha256$RI8...&#39;,
-  &#39;favoriteFeature&#39;: &#39;the recommendation feature&#39;,
+<pre>[{&#39;appName&#39;: &#39;hello&#39;,
+  &#39;personalUse&#39;: &#39;hello&#39;,
+  &#39;password&#39;: &#39;hello...&#39;,
+  &#39;favoriteFeature&#39;: &#39;hello&#39;,
+  &#39;uid&#39;: &#39;hello&#39;},
+ {&#39;appName&#39;: &#39;clock&#39;,
+  &#39;personalUse&#39;: &#39;looking at time&#39;,
+  &#39;password&#39;: &#39;clock...&#39;,
+  &#39;favoriteFeature&#39;: &#39;looking at time&#39;,
+  &#39;uid&#39;: &#39;clock&#39;},
+ {&#39;appName&#39;: &#39;g&#39;,
+  &#39;personalUse&#39;: &#39;&#39;,
+  &#39;password&#39;: &#39;g...&#39;,
+  &#39;favoriteFeature&#39;: &#39;g&#39;,
+  &#39;uid&#39;: &#39;g&#39;},
+ {&#39;appName&#39;: &#39;Netflix&#39;,
+  &#39;personalUse&#39;: &#39;Watch Movies&#39;,
+  &#39;password&#39;: &#39;sha256$gI7...&#39;,
+  &#39;favoriteFeature&#39;: &#39;watching Movies&#39;,
   &#39;uid&#39;: &#39;netflix&#39;},
- {&#39;appName&#39;: &#39;google&#39;,
-  &#39;personalUse&#39;: &#39;looking up things&#39;,
-  &#39;password&#39;: &#39;google...&#39;,
-  &#39;favoriteFeature&#39;: &#39;looking up things&#39;,
-  &#39;uid&#39;: &#39;google&#39;},
- {&#39;appName&#39;: &#39;robinhood&#39;,
-  &#39;personalUse&#39;: &#39;trading stocks&#39;,
-  &#39;password&#39;: &#39;sha256$MHv...&#39;,
-  &#39;favoriteFeature&#39;: &#39;trading stocks&#39;,
-  &#39;uid&#39;: &#39;robinhood&#39;},
- {&#39;appName&#39;: &#39;clash of clans&#39;,
-  &#39;personalUse&#39;: &#39;playing videogames&#39;,
-  &#39;password&#39;: &#39;sha256$n1z...&#39;,
-  &#39;favoriteFeature&#39;: &#39;the color scheme&#39;,
-  &#39;uid&#39;: &#39;clash of clans&#39;}]</pre>
+ {&#39;appName&#39;: &#39;tho&#39;,
+  &#39;personalUse&#39;: &#39;tho&#39;,
+  &#39;password&#39;: &#39;tho...&#39;,
+  &#39;favoriteFeature&#39;: &#39;tho&#39;,
+  &#39;uid&#39;: &#39;tho&#39;},
+ {&#39;appName&#39;: &#39;roadwarrior&#39;,
+  &#39;personalUse&#39;: &#39;f&#39;,
+  &#39;password&#39;: &#39;iloveroadw...&#39;,
+  &#39;favoriteFeature&#39;: &#39;f&#39;,
+  &#39;uid&#39;: &#39;roadwire&#39;}]</pre>
 </div>
 
 </div>
@@ -545,6 +554,21 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>roadwire has been deleted. 
+[{&#39;appName&#39;: &#39;hello&#39;, &#39;personalUse&#39;: &#39;hello&#39;, &#39;password&#39;: &#39;hello...&#39;, &#39;favoriteFeature&#39;: &#39;hello&#39;, &#39;uid&#39;: &#39;hello&#39;}, {&#39;appName&#39;: &#39;clock&#39;, &#39;personalUse&#39;: &#39;looking at time&#39;, &#39;password&#39;: &#39;clock...&#39;, &#39;favoriteFeature&#39;: &#39;looking at time&#39;, &#39;uid&#39;: &#39;clock&#39;}, {&#39;appName&#39;: &#39;g&#39;, &#39;personalUse&#39;: &#39;&#39;, &#39;password&#39;: &#39;g...&#39;, &#39;favoriteFeature&#39;: &#39;g&#39;, &#39;uid&#39;: &#39;g&#39;}, {&#39;appName&#39;: &#39;Netflix&#39;, &#39;personalUse&#39;: &#39;Watch Movies&#39;, &#39;password&#39;: &#39;sha256$gI7...&#39;, &#39;favoriteFeature&#39;: &#39;watching Movies&#39;, &#39;uid&#39;: &#39;netflix&#39;}, {&#39;appName&#39;: &#39;tho&#39;, &#39;personalUse&#39;: &#39;tho&#39;, &#39;password&#39;: &#39;tho...&#39;, &#39;favoriteFeature&#39;: &#39;tho&#39;, &#39;uid&#39;: &#39;tho&#39;}]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -599,9 +623,23 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>User has been updated
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb Cell 12</span> in <span class="ansi-cyan-fg">&lt;cell line: 24&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb#X14sZmlsZQ%3D%3D?line=19&#39;&gt;20&lt;/a&gt;</span>         db.session.commit()   
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb#X14sZmlsZQ%3D%3D?line=21&#39;&gt;22&lt;/a&gt;</span>     print(&#34;User has been updated&#34; )
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb#X14sZmlsZQ%3D%3D?line=23&#39;&gt;24&lt;/a&gt;</span> Updatey()
+
+<span class="ansi-green-intense-fg ansi-bold">/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb Cell 12</span> in <span class="ansi-cyan-fg">Updatey</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb#X14sZmlsZQ%3D%3D?line=11&#39;&gt;12&lt;/a&gt;</span> personalUse = str(input(&#34;new personal use?&#34;))
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb#X14sZmlsZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span> favoriteFeature = str(input(&#34;New Favorite feature?&#34;))
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb#X14sZmlsZQ%3D%3D?line=13&#39;&gt;14&lt;/a&gt;</span> user._appName = appName
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb#X14sZmlsZQ%3D%3D?line=14&#39;&gt;15&lt;/a&gt;</span> user._uid = uid
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-13-4ahacks.ipynb#X14sZmlsZQ%3D%3D?line=15&#39;&gt;16&lt;/a&gt;</span> user._password = password
+
+<span class="ansi-red-fg">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;_appName&#39;</pre>
 </div>
 </div>
 
@@ -631,7 +669,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{&#39;appName&#39;: &#39;glory&#39;, &#39;personalUse&#39;: &#39;rest&#39;, &#39;password&#39;: &#39;glory...&#39;, &#39;favoriteFeature&#39;: &#39;rest&#39;, &#39;uid&#39;: &#39;glory&#39;}, {&#39;appName&#39;: &#39;clock&#39;, &#39;personalUse&#39;: &#39;looking at time&#39;, &#39;password&#39;: &#39;clock...&#39;, &#39;favoriteFeature&#39;: &#39;looking at time&#39;, &#39;uid&#39;: &#39;clock&#39;}, {&#39;appName&#39;: &#39;robinhood&#39;, &#39;personalUse&#39;: &#39;trading stocks&#39;, &#39;password&#39;: &#39;sha256$MHv...&#39;, &#39;favoriteFeature&#39;: &#39;trading stocks&#39;, &#39;uid&#39;: &#39;robinhood&#39;}, {&#39;appName&#39;: &#39;clash of clans&#39;, &#39;personalUse&#39;: &#39;playing videogames&#39;, &#39;password&#39;: &#39;sha256$n1z...&#39;, &#39;favoriteFeature&#39;: &#39;the color scheme&#39;, &#39;uid&#39;: &#39;clash of clans&#39;}]
+<pre>[{&#39;appName&#39;: &#39;hello&#39;, &#39;personalUse&#39;: &#39;hello&#39;, &#39;password&#39;: &#39;hello...&#39;, &#39;favoriteFeature&#39;: &#39;hello&#39;, &#39;uid&#39;: &#39;hello&#39;}, {&#39;appName&#39;: &#39;clock&#39;, &#39;personalUse&#39;: &#39;looking at time&#39;, &#39;password&#39;: &#39;clock...&#39;, &#39;favoriteFeature&#39;: &#39;looking at time&#39;, &#39;uid&#39;: &#39;clock&#39;}, {&#39;appName&#39;: &#39;g&#39;, &#39;personalUse&#39;: &#39;&#39;, &#39;password&#39;: &#39;g...&#39;, &#39;favoriteFeature&#39;: &#39;g&#39;, &#39;uid&#39;: &#39;g&#39;}, {&#39;appName&#39;: &#39;Netflix&#39;, &#39;personalUse&#39;: &#39;Watch Movies&#39;, &#39;password&#39;: &#39;sha256$gI7...&#39;, &#39;favoriteFeature&#39;: &#39;watching Movies&#39;, &#39;uid&#39;: &#39;netflix&#39;}, {&#39;appName&#39;: &#39;tho&#39;, &#39;personalUse&#39;: &#39;tho&#39;, &#39;password&#39;: &#39;tho...&#39;, &#39;favoriteFeature&#39;: &#39;tho&#39;, &#39;uid&#39;: &#39;tho&#39;}]
 </pre>
 </div>
 </div>
