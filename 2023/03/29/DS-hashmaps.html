@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions | fastpages Project</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Observing hashmaps with python dictionaries" />
+<meta property="og:description" content="Observing hashmaps with python dictionaries" />
+<link rel="canonical" href="https://kushsirohi123.github.io/kushsirohirepo/2023/03/29/DS-hashmaps.html" />
+<meta property="og:url" content="https://kushsirohi123.github.io/kushsirohirepo/2023/03/29/DS-hashmaps.html" />
+<meta property="og:site_name" content="fastpages Project" />
+<meta property="og:image" content="https://kushsirohi123.github.io/kushsirohirepo/images/python.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-29T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://kushsirohi123.github.io/kushsirohirepo/images/python.png" />
+<meta property="twitter:title" content="Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-29T00:00:00-05:00","datePublished":"2023-03-29T00:00:00-05:00","description":"Observing hashmaps with python dictionaries","headline":"Data Structures- Hashmaps, Sets, Hash Tables, Hashing and Collisions","image":"https://kushsirohi123.github.io/kushsirohirepo/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kushsirohi123.github.io/kushsirohirepo/2023/03/29/DS-hashmaps.html"},"url":"https://kushsirohi123.github.io/kushsirohirepo/2023/03/29/DS-hashmaps.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/kushsirohirepo/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kushsirohi123.github.io/kushsirohirepo/feed.xml" title="fastpages Project" /><link rel="shortcut icon" type="image/x-icon" href="/kushsirohirepo/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/kushsirohirepo/">fastpages Project</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/kushsirohirepo/_pages/2022-08-28-APCSPvocab.html">APCSP vocab</a><a class="page-link" href="/kushsirohirepo/_pages/2022-09-25-submenu.html">Submenu</a><a class="page-link" href="/kushsirohirepo/about/">About Me</a><a class="page-link" href="/kushsirohirepo/search/">Search</a><a class="page-link" href="/kushsirohirepo/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-29-DS-hashmaps.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-a-Hashtable/Hashmap?">What is a Hashtable/Hashmap?<a class="anchor-link" href="#What-is-a-Hashtable/Hashmap?"> </a></h2><blockquote><p>A hashtable is a data structure that with a collection of key-value pairs, where each key maps to a value, and the keys must be unique and hashable.</p>
+</blockquote>
+<ul>
+<li>In Python there is a built in hashtable known as a Dictonary.</li>
+</ul>
+<blockquote><p>The primary purpose of a hashtable is to provide efficient lookup, insertion, and deletion operations. When an element is to be inserted into the hashtable, a hash function is used to map the key to a specific index in the underlying array that is used to store the key-value pairs. The value is then stored at that index. When searching for a value, the hash function is used again to find the index where the value is stored.</p>
+<p>The key advantage of a hashtable over other data structures like arrays and linked lists is its average-case time complexity for lookup, insertion, and deletion operations.</p>
+</blockquote>
+<ul>
+<li>The typical time complexity of a hashtable is 1. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-Hashing-and-Collision?">What is Hashing and Collision?<a class="anchor-link" href="#What-is-Hashing-and-Collision?"> </a></h2><blockquote><p>Hashing is the process of mapping a given key to a value in a hash table or hashmap, using a hash function. The hash function takes the key as input and produces a hash value or hash code, which is then used to determine the index in the underlying array where the value is stored. The purpose of hashing is to provide a quick and efficient way to access data, by eliminating the need to search through an entire data structure to find a value.</p>
+<p>However, it is possible for two different keys to map to the same hash value, resulting in a collision. When a collision occurs, there are different ways to resolve it, depending on the collision resolution strategy used.</p>
+<p>Python's dictionary implementation is optimized to handle collisions efficiently, and the performance of the dictionary is generally very good, even in the presence of collisions. However, if the number of collisions is very high, the performance of the dictionary can degrade, so it is important to choose a good hash function that minimizes collisions when designing a Python dictionary.</p>
+</blockquote>
+<h2 id="What-is-a-Set?">What is a Set?<a class="anchor-link" href="#What-is-a-Set?"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_set</span><span class="p">)</span>  
+
+<span class="c1"># What do you notice in the output?</span>
+<span class="c1"># its in numbered ordered, and doesn&#39;t do the repeated value</span>
+<span class="c1">#</span>
+
+<span class="c1"># Why do you think Sets are in the same tech talk as Hashmaps/Hashtables?</span>
+<span class="c1"># Because they both have collison</span>
+<span class="c1">#</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1, 2, 3}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Dictionary-Example">Dictionary Example<a class="anchor-link" href="#Dictionary-Example"> </a></h2><p>Below are just some basic features of a dictionary. As always, documentation is always the main source for all the full capablilties.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">album</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Theo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Kush&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2023</span><span class="p">,</span>
+    <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;theo&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;The adventures of Theo Huntalas&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Theo&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Theo1&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Theo2&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;theo4&quot;</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;theo5&quot;</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot; theo6&quot;</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;theo7&quot;</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;theo8&quot;</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;theo9&quot;</span><span class="p">,</span>
+        <span class="mi">11</span><span class="p">:</span> <span class="s2">&quot;theo10&quot;</span><span class="p">,</span>
+        <span class="mi">12</span><span class="p">:</span> <span class="s2">&quot;theo11&quot;</span><span class="p">,</span>
+        <span class="mi">13</span><span class="p">:</span> <span class="s2">&quot;theo12&quot;</span><span class="p">,</span>
+        <span class="mi">14</span><span class="p">:</span> <span class="s2">&quot;theo13&quot;</span><span class="p">,</span>
+        <span class="mi">15</span><span class="p">:</span> <span class="s2">&quot;theo14&quot;</span><span class="p">,</span>
+        <span class="mi">16</span><span class="p">:</span> <span class="s2">&quot;theo15&quot;</span><span class="p">,</span>
+        <span class="mi">17</span><span class="p">:</span> <span class="s2">&quot;theo16&quot;</span><span class="p">,</span>
+        <span class="mi">18</span><span class="p">:</span> <span class="s2">&quot;theo17&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1"># What data structures do you see?</span>
+<span class="c1">#   </span>
+<span class="c1">#</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;title&#39;: &#39;Theo&#39;, &#39;artist&#39;: &#39;Kush&#39;, &#39;year&#39;: 2023, &#39;genre&#39;: [&#39;theo&#39;], &#39;tracks&#39;: {1: &#39;The adventures of Theo Huntalas&#39;, 2: &#39;Theo&#39;, 3: &#39;Theo1&#39;, 4: &#39;Theo2&#39;, 5: &#39;theo4&#39;, 6: &#39;theo5&#39;, 7: &#39; theo6&#39;, 8: &#39;theo7&#39;, 9: &#39;theo8&#39;, 10: &#39;theo9&#39;, 11: &#39;theo10&#39;, 12: &#39;theo11&#39;, 13: &#39;theo12&#39;, 14: &#39;theo13&#39;, 15: &#39;theo14&#39;, 16: &#39;theo15&#39;, 17: &#39;theo16&#39;, 18: &#39;theo17&#39;}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tracks&#39;</span><span class="p">))</span>
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="p">[</span><span class="s1">&#39;tracks&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{1: &#39;The adventures of Theo Huntalas&#39;, 2: &#39;Theo&#39;, 3: &#39;Theo1&#39;, 4: &#39;Theo2&#39;, 5: &#39;theo4&#39;, 6: &#39;theo5&#39;, 7: &#39; theo6&#39;, 8: &#39;theo7&#39;, 9: &#39;theo8&#39;, 10: &#39;theo9&#39;, 11: &#39;theo10&#39;, 12: &#39;theo11&#39;, 13: &#39;theo12&#39;, 14: &#39;theo13&#39;, 15: &#39;theo14&#39;, 16: &#39;theo15&#39;, 17: &#39;theo16&#39;, 18: &#39;theo17&#39;}
+{1: &#39;The adventures of Theo Huntalas&#39;, 2: &#39;Theo&#39;, 3: &#39;Theo1&#39;, 4: &#39;Theo2&#39;, 5: &#39;theo4&#39;, 6: &#39;theo5&#39;, 7: &#39; theo6&#39;, 8: &#39;theo7&#39;, 9: &#39;theo8&#39;, 10: &#39;theo9&#39;, 11: &#39;theo10&#39;, 12: &#39;theo11&#39;, 13: &#39;theo12&#39;, 14: &#39;theo13&#39;, 15: &#39;theo14&#39;, 16: &#39;theo15&#39;, 17: &#39;theo16&#39;, 18: &#39;theo17&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tracks&#39;</span><span class="p">)[</span><span class="mi">4</span><span class="p">])</span>
+<span class="c1"># or</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="p">[</span><span class="s1">&#39;tracks&#39;</span><span class="p">][</span><span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Theo2
+Theo2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">album</span><span class="p">[</span><span class="s2">&quot;producer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Kush1&#39;</span><span class="p">,</span> <span class="s1">&#39;Kush2&#39;</span><span class="p">,</span> <span class="s1">&#39;kush3&#39;</span><span class="p">,</span> <span class="s1">&#39;kush4&#39;</span><span class="p">,</span> <span class="s1">&#39;kush5&#39;</span><span class="p">,</span> <span class="s1">&#39;kush6&#39;</span><span class="p">])</span>
+
+<span class="c1"># What can you change to make sure there are no duplicate producers?</span>
+<span class="c1"># Make it into a set</span>
+<span class="c1">#</span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;title&#39;: &#39;Theo&#39;, &#39;artist&#39;: &#39;Kush&#39;, &#39;year&#39;: 2023, &#39;genre&#39;: [&#39;theo&#39;], &#39;tracks&#39;: {1: &#39;The adventures of Theo Huntalas&#39;, 2: &#39;Theo&#39;, 3: &#39;Theo1&#39;, 4: &#39;Theo2&#39;, 5: &#39;theo4&#39;, 6: &#39;theo5&#39;, 7: &#39; theo6&#39;, 8: &#39;theo7&#39;, 9: &#39;theo8&#39;, 10: &#39;theo9&#39;, 11: &#39;theo10&#39;, 12: &#39;theo11&#39;, 13: &#39;theo12&#39;, 14: &#39;theo13&#39;, 15: &#39;theo14&#39;, 16: &#39;theo15&#39;, 17: &#39;theo16&#39;, 18: &#39;theo17&#39;}, &#39;producer&#39;: {&#39;Kush1&#39;, &#39;kush3&#39;, &#39;kush6&#39;, &#39;kush5&#39;, &#39;Kush2&#39;, &#39;kush4&#39;}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">album</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="mi">19</span><span class="p">:</span> <span class="s2">&quot;Theo19&quot;</span><span class="p">})</span>
+<span class="n">album</span><span class="p">[</span><span class="s2">&quot;genre&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;theo&quot;</span><span class="p">)</span>
+<span class="c1"># How would add an additional genre to the dictionary, like electropop? </span>
+<span class="c1"># do the .update()</span>
+<span class="c1"># </span>
+
+<span class="c1"># Printing the dictionary</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">album</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;title&#39;: &#39;Theo&#39;, &#39;artist&#39;: &#39;Kush&#39;, &#39;year&#39;: 2023, &#39;genre&#39;: [&#39;theo&#39;, &#39;theo&#39;], &#39;tracks&#39;: {1: &#39;The adventures of Theo Huntalas&#39;, 2: &#39;Theo&#39;, 3: &#39;Theo1&#39;, 4: &#39;Theo2&#39;, 5: &#39;theo4&#39;, 6: &#39;theo5&#39;, 7: &#39; theo6&#39;, 8: &#39;theo7&#39;, 9: &#39;theo8&#39;, 10: &#39;theo9&#39;, 11: &#39;theo10&#39;, 12: &#39;theo11&#39;, 13: &#39;theo12&#39;, 14: &#39;theo13&#39;, 15: &#39;theo14&#39;, 16: &#39;theo15&#39;, 17: &#39;theo16&#39;, 18: &#39;theo17&#39;, 19: &#39;Theo19&#39;}, &#39;producer&#39;: {&#39;Kush1&#39;, &#39;kush3&#39;, &#39;kush6&#39;, &#39;kush5&#39;, &#39;Kush2&#39;, &#39;kush4&#39;}}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">album</span><span class="o">.</span><span class="n">items</span><span class="p">():</span> <span class="c1"># iterate using a for loop for key and value</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tracks&quot;</span><span class="p">):</span>
+    <span class="n">track</span> <span class="o">=</span> <span class="n">album</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I love </span><span class="si">{</span><span class="n">track</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># Write your own code to print tracks in readable format</span>
+<span class="c1"># </span>
+<span class="c1">#</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>title: Theo
+artist: Kush
+year: 2023
+genre: [&#39;theo&#39;, &#39;theo&#39;]
+tracks: {1: &#39;The adventures of Theo Huntalas&#39;, 2: &#39;Theo&#39;, 3: &#39;Theo1&#39;, 4: &#39;Theo2&#39;, 5: &#39;theo4&#39;, 6: &#39;theo5&#39;, 7: &#39; theo6&#39;, 8: &#39;theo7&#39;, 9: &#39;theo8&#39;, 10: &#39;theo9&#39;, 11: &#39;theo10&#39;, 12: &#39;theo11&#39;, 13: &#39;theo12&#39;, 14: &#39;theo13&#39;, 15: &#39;theo14&#39;, 16: &#39;theo15&#39;, 17: &#39;theo16&#39;, 18: &#39;theo17&#39;, 19: &#39;Theo19&#39;}
+producer: {&#39;Kush1&#39;, &#39;kush3&#39;, &#39;kush6&#39;, &#39;kush5&#39;, &#39;Kush2&#39;, &#39;kush4&#39;}
+I love The adventures of Theo Huntalas
+I love Theo
+I love Theo1
+I love Theo2
+I love theo4
+I love theo5
+I love  theo6
+I love theo7
+I love theo8
+I love theo9
+I love theo10
+I love theo11
+I love theo12
+I love theo13
+I love theo14
+I love theo15
+I love theo16
+I love theo17
+I love Theo19
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search</span><span class="p">():</span>
+    <span class="n">search_term</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What would you like to know about the album?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">search_term</span><span class="p">)</span>
+    <span class="n">search_results</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">album</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">search_term</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>
+            <span class="n">search_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">album</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">search_results</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">search_results</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid search&quot;</span><span class="p">)</span>
+
+<span class="n">search</span><span class="p">()</span>
+
+
+<span class="c1"># This is a very basic code segment, how can you improve upon this code?</span>
+<span class="c1"># add capitalization handling</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>theo1
+Invalid search
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">Hacks<a class="anchor-link" href="#Hacks"> </a></h2><ul>
+<li>Answer <em>ALL</em> questions in the code segments</li>
+<li><p>Create a diagram or comparison illustration (Canva).</p>
+<ul>
+<li>What are the pro and cons of using this data structure? </li>
+<li>Dictionary vs List</li>
+</ul>
+</li>
+<li><p>Expand upon the code given to you, possible improvements in comments</p>
+<ul>
+<li>Could you list compression instead of so many for loops</li>
+<li>Added captalizion error handling in the search function</li>
+</ul>
+</li>
+<li><p>Build your own album showing features of a python dictionary</p>
+</li>
+<li><p>For Mr. Yeung's class: Justify your favorite Taylor Swift song, answer may effect seed</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks-Answered">Hacks Answered<a class="anchor-link" href="#Hacks-Answered"> </a></h2><ul>
+<li>Dict<ul>
+<li>Pros: You can retrive values with keys, easier to associate certain types of data with certain types of keys</li>
+<li>Cons: You cannot edit it </li>
+</ul>
+</li>
+<li><p>List</p>
+<ul>
+<li>Pros: You can update it at any time, use crud </li>
+<li>Cons: It takes longer </li>
+</ul>
+</li>
+<li><p>Expand upon the code given to you, possible improvements in comments</p>
+<ul>
+<li>Could you list compression instead of so many for loops</li>
+<li>Added captalizion error handling in the search function</li>
+</ul>
+</li>
+</ul>
+<h2 id="My-own-Album">My own Album<a class="anchor-link" href="#My-own-Album"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">theozaddy</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Drake&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Drake&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="mi">2069</span><span class="p">,</span>
+    <span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Rap&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;tracks&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas&quot;</span><span class="p">,</span>
+        <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas goes shopping&quot;</span><span class="p">,</span>
+        <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas goes to school&quot;</span><span class="p">,</span>
+        <span class="mi">4</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas goes to sleep&quot;</span><span class="p">,</span>
+        <span class="mi">5</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas wakes up&quot;</span><span class="p">,</span>
+        <span class="mi">6</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas eats breakfast&quot;</span><span class="p">,</span>
+        <span class="mi">7</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas drives a car&quot;</span><span class="p">,</span>
+        <span class="mi">8</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas eats lunch&quot;</span><span class="p">,</span>
+        <span class="mi">9</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas watches a movie&quot;</span><span class="p">,</span>
+        <span class="mi">10</span><span class="p">:</span> <span class="s2">&quot;Theo Huntalas sleeps again&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">## Using SET</span>
+<span class="n">theozaddy</span><span class="p">[</span><span class="s2">&quot;biggest fan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="s1">&#39;Kush Sirohi&#39;</span><span class="p">,</span> <span class="s1">&#39;Kush Sirohi&#39;</span><span class="p">,</span> <span class="s1">&#39;Kush Sirohi&#39;</span> <span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">theozaddy</span><span class="p">[</span><span class="s2">&quot;biggest fan&quot;</span><span class="p">])</span>
+
+<span class="c1">## Gets all the track names and puts them into a list</span>
+<span class="n">track_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">track_name</span> <span class="k">for</span> <span class="n">track_name</span> <span class="ow">in</span> <span class="n">theozaddy</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">track_names</span><span class="p">)</span>
+
+<span class="c1">## I love &quot;insert song name&quot; + list comprehenison using GET</span>
+<span class="n">_</span> <span class="o">=</span> <span class="p">[</span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I love </span><span class="si">{</span><span class="n">theozaddy</span><span class="p">[</span><span class="s1">&#39;tracks&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">theozaddy</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tracks&quot;</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;Kush Sirohi&#39;}
+[&#39;Theo Huntalas&#39;, &#39;Theo Huntalas goes shopping&#39;, &#39;Theo Huntalas goes to school&#39;, &#39;Theo Huntalas goes to sleep&#39;, &#39;Theo Huntalas wakes up&#39;, &#39;Theo Huntalas eats breakfast&#39;, &#39;Theo Huntalas drives a car&#39;, &#39;Theo Huntalas eats lunch&#39;, &#39;Theo Huntalas watches a movie&#39;, &#39;Theo Huntalas sleeps again&#39;]
+I love Theo Huntalas
+I love Theo Huntalas goes shopping
+I love Theo Huntalas goes to school
+I love Theo Huntalas goes to sleep
+I love Theo Huntalas wakes up
+I love Theo Huntalas eats breakfast
+I love Theo Huntalas drives a car
+I love Theo Huntalas eats lunch
+I love Theo Huntalas watches a movie
+I love Theo Huntalas sleeps again
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/kushsirohirepo/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://kushsirohi123.github.io/kushsirohirepo/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/kushsirohirepo/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>The first project.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
