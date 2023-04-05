@@ -283,7 +283,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[&#39;Free Smoke&#39;, &#39;No Long Talk&#39;, &#39;Passionfruit&#39;, &#39;Jorja Interlude&#39;, &#39;Get It Together&#39;, &#39;Madiba Riddim&#39;, &#39;Blem&#39;, &#39;4422&#39;, &#39;Gyalchester&#39;, &#39;Skepta Interlude&#39;, &#39;Portland&#39;, &#39;Sacrifices\u200b&#39;, &#39;Nothings Into Somethings&#39;, &#39;Teenage Fever&#39;, &#39;KMT&#39;, &#39;Lose You&#39;, &#34;Can&#39;t Have Everything&#34;, &#39;Glow&#39;, &#39;All Of The Girls You Loved Before&#39;, &#39;Fake Love&#39;, &#39;Ice Melts&#39;, &#39;Do Not Disturb&#39;]
+<pre>[&#39;Free Smoke&#39;, &#39;No Long Talk&#39;, &#39;Passionfruit&#39;, &#39;Jorja Interlude&#39;, &#39;Get It Together&#39;, &#39;Madiba Riddim&#39;, &#39;Blem&#39;, &#39;4422&#39;, &#39;Gyalchester&#39;, &#39;Skepta Interlude&#39;, &#39;Portland&#39;, &#39;Sacrifices\u200b&#39;, &#39;Nothings Into Somethings&#39;, &#39;Teenage Fever&#39;, &#39;KMT&#39;, &#39;Lose You&#39;, &#34;Can&#39;t Have Everything&#34;, &#39;Glow&#39;, &#39;Since Way Back&#39;, &#39;Fake Love&#39;, &#39;Ice Melts&#39;, &#39;Do Not Disturb&#39;]
 </pre>
 </div>
 </div>
@@ -355,7 +355,7 @@ Jorja Interlude
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;title&#39;: &#39;&#39;, &#39;artist&#39;: &#39;Drake&#39;, &#39;year&#39;: 2017, &#39;genre&#39;: [&#39;rap&#39;, &#39;rnb&#39;], &#39;tracks&#39;: {1: &#39;Free Smoke&#39;, 2: &#39;No Long Talk&#39;, 3.0: &#39;Passionfruit&#39;, 4: &#39;Jorja Interlude&#39;, 5: &#39;Get It Together&#39;, 6: &#39;Madiba Riddim&#39;, 7: &#39;Blem&#39;, 8: &#39;4422&#39;, 9.0: &#39;Gyalchester&#39;, 10: &#39;Skepta Interlude&#39;, 11: &#39;Portland&#39;, 12: &#39;Sacrifices\u200b&#39;, 13: &#39;Nothings Into Somethings&#39;, 14: &#39;Teenage Fever&#39;, 15: &#39;KMT&#39;, 16: &#39;Lose You&#39;, 17: &#34;Can&#39;t Have Everything&#34;, 18: &#39;Glow&#39;, 19: &#39;All Of The Girls You Loved Before&#39;, 20: &#39;Fake Love&#39;, 21: &#39;Ice Melts&#39;, 22: &#39;Do Not Disturb&#39;}, &#39;producer&#39;: [&#39;Taylor Swift&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39;, &#39;Taylor Swift&#39;, &#39;Louis Bell&#39;, &#39;Frank Dukes&#39;]}
+<pre>{&#39;title&#39;: &#39;&#39;, &#39;artist&#39;: &#39;Drake&#39;, &#39;year&#39;: 2017, &#39;genre&#39;: [&#39;rap&#39;, &#39;rnb&#39;], &#39;tracks&#39;: {1: &#39;Free Smoke&#39;, 2: &#39;No Long Talk&#39;, 3.0: &#39;Passionfruit&#39;, 4: &#39;Jorja Interlude&#39;, 5: &#39;Get It Together&#39;, 6: &#39;Madiba Riddim&#39;, 7: &#39;Blem&#39;, 8: &#39;4422&#39;, 9.0: &#39;Gyalchester&#39;, 10: &#39;Skepta Interlude&#39;, 11: &#39;Portland&#39;, 12: &#39;Sacrifices\u200b&#39;, 13: &#39;Nothings Into Somethings&#39;, 14: &#39;Teenage Fever&#39;, 15: &#39;KMT&#39;, 16: &#39;Lose You&#39;, 17: &#34;Can&#39;t Have Everything&#34;, 18: &#39;Glow&#39;, 19: &#39;Since Way Back&#39;, 20: &#39;Fake Love&#39;, 21: &#39;Ice Melts&#39;, 22: &#39;Do Not Disturb&#39;}, &#39;producer&#39;: [&#39;Taylor Swift&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39;, &#39;Taylor Swift&#39;, &#39;Louis Bell&#39;, &#39;Frank Dukes&#39;]}
 </pre>
 </div>
 </div>
@@ -480,7 +480,7 @@ Jorja Interlude
 
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lover_album</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tracks&quot;</span><span class="p">):</span>
-    <span class="n">track</span> <span class="o">=</span> <span class="n">track</span> <span class="o">+</span> <span class="n">lover_album</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">track</span> <span class="o">=</span> <span class="n">lover_album</span><span class="p">[</span><span class="s2">&quot;tracks&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;I love </span><span class="si">{</span><span class="n">track</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -500,23 +500,29 @@ year: 2017
 genre: [&#39;rap&#39;, &#39;rnb&#39;]
 tracks: {1: &#39;Free Smoke&#39;, 2: &#39;No Long Talk&#39;, 3.0: &#39;Passionfruit&#39;, 4: &#39;Jorja Interlude&#39;, 5: &#39;Get It Together&#39;, 6: &#39;Madiba Riddim&#39;, 7: &#39;Blem&#39;, 8: &#39;4422&#39;, 9.0: &#39;Gyalchester&#39;, 10: &#39;Skepta Interlude&#39;, 11: &#39;Portland&#39;, 12: &#39;Sacrifices\u200b&#39;, 13: &#39;Nothings Into Somethings&#39;, 14: &#39;Teenage Fever&#39;, 15: &#39;KMT&#39;, 16: &#39;Lose You&#39;, 17: &#34;Can&#39;t Have Everything&#34;, 18: &#39;Glow&#39;, 19: &#39;All Of The Girls You Loved Before&#39;, 20: &#39;Fake Love&#39;, 21: &#39;Ice Melts&#39;, 22: &#39;Do Not Disturb&#39;}
 producer: {&#39;kanyewest&#39;}
+I love Free Smoke
+I love No Long Talk
+I love Passionfruit
+I love Jorja Interlude
+I love Get It Together
+I love Madiba Riddim
+I love Blem
+I love 4422
+I love Gyalchester
+I love Skepta Interlude
+I love Portland
+I love Sacrifices​
+I love Nothings Into Somethings
+I love Teenage Fever
+I love KMT
+I love Lose You
+I love Can&#39;t Have Everything
+I love Glow
+I love All Of The Girls You Loved Before
+I love Fake Love
+I love Ice Melts
+I love Do Not Disturb
 </pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 15</span> in <span class="ansi-cyan-fg">&lt;cell line: 6&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X43sZmlsZQ%3D%3D?line=1&#39;&gt;2&lt;/a&gt;</span>     print(str(k) + &#34;: &#34; + str(v))
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X43sZmlsZQ%3D%3D?line=5&#39;&gt;6&lt;/a&gt;</span> for i in lover_album.get(&#34;tracks&#34;):
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X43sZmlsZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span>     track = track + lover_album[&#34;tracks&#34;][i]
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell:/Users/kushsirohi/Desktop/kushsirohirepo-1/_notebooks/2023-03-29-DS-hashmaps.ipynb#X43sZmlsZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span>     print(f&#34;I love {track}&#34;)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;track&#39; is not defined</pre>
 </div>
 </div>
 
@@ -556,7 +562,7 @@ artist: Drake
 year: 2017
 genre: [&#39;rap&#39;, &#39;rnb&#39;]
 tracks: {1: &#39;Free Smoke&#39;, 2: &#39;No Long Talk&#39;, 3.0: &#39;Passionfruit&#39;, 4: &#39;Jorja Interlude&#39;, 5: &#39;Get It Together&#39;, 6: &#39;Madiba Riddim&#39;, 7: &#39;Blem&#39;, 8: &#39;4422&#39;, 9.0: &#39;Gyalchester&#39;, 10: &#39;Skepta Interlude&#39;, 11: &#39;Portland&#39;, 12: &#39;Sacrifices\u200b&#39;, 13: &#39;Nothings Into Somethings&#39;, 14: &#39;Teenage Fever&#39;, 15: &#39;KMT&#39;, 16: &#39;Lose You&#39;, 17: &#34;Can&#39;t Have Everything&#34;, 18: &#39;Glow&#39;, 19: &#39;All Of The Girls You Loved Before&#39;, 20: &#39;Fake Love&#39;, 21: &#39;Ice Melts&#39;, 22: &#39;Do Not Disturb&#39;}
-producer: [&#39;Taylor Swift&#39;, &#39;Jack Antonoff&#39;, &#39;Joel Little&#39;, &#39;Taylor Swift&#39;, &#39;Louis Bell&#39;, &#39;Frank Dukes&#39;]
+producer: {&#39;kanyewest&#39;}
 </pre>
 </div>
 </div>
